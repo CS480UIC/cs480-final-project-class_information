@@ -9,6 +9,6 @@ class_information
 # Author(s)
 1. Jay Chen
 2. Jibreel Mohamed
-3. (Joshua put your name here)
+3. Joshua Dudley
 # Database description
 Write the database description and requirements here
