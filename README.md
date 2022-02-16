@@ -5,9 +5,10 @@
 1. [Database description](#description)
  
 # Database
-DATABASE NAME
+class_information
 # Author(s)
-AUTHOR1
-AUTHOR2
+1. Jay Chen
+2. Jibreel Mohamed
+3. (Joshua put your name here)
 # Database description
 Write the database description and requirements here
