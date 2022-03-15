@@ -22,7 +22,7 @@
   
   <body>
   <h1>Grade Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value=''/>" method="post">
 	StudentID    :<input type="text" name="StudentID" value="${form.StudentID }"/>
 	<span style="color: red; font-weight: 900">${errors.StudentID }</span>
 	<br/>
