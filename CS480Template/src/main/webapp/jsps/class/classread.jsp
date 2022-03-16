@@ -21,14 +21,14 @@
   </head>
   
   <body>
-  <h1>Read Grade</h1>
+  <h1>Read Class</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value=''/>" method="post">
-    AssignmentID    :<input type="text" name="AssignmentID" value="${form.AssignmentID }"/>
-	<span style="color: red; font-weight: 900">${errors.AssignmentID }</span>
+    ClassName    :<input type="text" name="ClassName" value="${form.ClassName }"/>
+	<span style="color: red; font-weight: 900">${errors.ClassName }</span>
 	<br/>
-	StudentID   :<input type="text" name="StudentID" value="${form.StudentID }"/>
-	<span style="color: red; font-weight: 900">${errors.StudentID }</span>
+    Semester    :<input type="text" name="Semester" value="${form.Semester }"/>
+	<span style="color: red; font-weight: 900">${errors.Semester }</span>
 	<br/>
 	<input type="submit" value="Read Grade"/>
 </form>

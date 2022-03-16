@@ -5,8 +5,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Read Entity1</title>
+    <title>body</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,16 +22,11 @@
   </head>
   
   <body>
-  <h1>Read Grade</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value=''/>" method="post">
-    AssignmentID    :<input type="text" name="AssignmentID" value="${form.AssignmentID }"/>
-	<span style="color: red; font-weight: 900">${errors.AssignmentID }</span>
-	<br/>
-	StudentID   :<input type="text" name="StudentID" value="${form.StudentID }"/>
-	<span style="color: red; font-weight: 900">${errors.StudentID }</span>
-	<br/>
-	<input type="submit" value="Read Grade"/>
-</form>
+    <h1>CRUD operations for Class</h1>
+    <br>
+	<a href="<c:url value='/jsp/class/classcreate.jsp'/>" target="_parent">Create Class</a> |&nbsp; 
+	<a href="<c:url value='/jsp/class/classread.jsp'/>" target="_parent">Read Class</a> |&nbsp;
+	<a href="<c:url value='/jsp/class/classupdate.jsp'/>" target="_parent">Update Class</a> |&nbsp;	 
+	<a href="<c:url value='/jsp/class/classdelete.jsp'/>" target="_parent">Delete Class</a>		    
   </body>
 </html>
