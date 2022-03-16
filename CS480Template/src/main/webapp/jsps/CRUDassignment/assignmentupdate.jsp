@@ -22,12 +22,11 @@
   
   <body>
   <h1>Update Assignment</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update Assignment:<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value=''/>" method="post">
+	Update ClassID:<input type="text" name="ClassID" value="${form.ClassID}"/>
+	<span style="color: red; font-weight: 900">${errors.ClassID}</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	<input type="submit" value="Update Assignment"/>
 </form>
   </body>
 </html>

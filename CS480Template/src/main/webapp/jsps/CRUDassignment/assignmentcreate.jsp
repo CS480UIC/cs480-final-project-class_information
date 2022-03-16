@@ -21,24 +21,24 @@
   </head>
   
   <body>
-  <h1>Entity1 Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	ClassID    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+  <h1>Assignment Create</h1>
+<form action="<c:url value=''/>" method="post">
+	ClassID    :<input type="text" name="ClassID" value="${form.class_id}"/>
+	<span style="color: red; font-weight: 900">${errors.class_id}</span>
 	<br/>
-	Title：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Title：<input type="text" name="title" value="${form.title}"/>
+	<span style="color: red; font-weight: 900">${errors.class_id}</span>
 	<br/>
-	Description	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Description	：<input type="text" name="description" value="${form.description}"/>
+	<span style="color: red; font-weight: 900">${errors.class_id}</span>
 	<br/>
-	Due Date	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Due Date	：<input type="text" name="due_date" value="${form.due_date}"/>
+	<span style="color: red; font-weight: 900">${errors.class_id}</span>
 	<br/>
-	Upload File	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Upload File	：<input type="text" name="upload_file" value="${form.upload_file}"/>
+	<span style="color: red; font-weight: 900">${errors.class_id}</span>
 	<br/>
-	<input type="submit" value="Create Entity1"/>
+	<input type="submit" value="Create Assignment"/>
 </form>
   </body>
 </html>

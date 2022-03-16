@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for Assignment</h1>
     <br>
-	<a href="<c:url value='/jsps/entity1/assignmentcreate.jsp'/>" target="_parent">Create Assignment</a> |&nbsp; 
-	<a href="<c:url value='/jsps/entity1/assignmentread.jsp'/>" target="_parent">Read Assignment</a> |&nbsp;
-	<a href="<c:url value='/jsps/entity1/assignmentupdate.jsp'/>" target="_parent">Update Assignment</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/entity1/assignmentdelete.jsp'/>" target="_parent">Delete Assignment</a>	
+	<a href="<c:url value='/jsps/CRUDassignment/assignmentcreate.jsp'/>" target="_parent">Create Assignment</a> |&nbsp; 
+	<a href="<c:url value='/jsps/CRUDassignment/assignmentread.jsp'/>" target="_parent">Read Assignment</a> |&nbsp;
+	<a href="<c:url value='/jsps/CRUDassignment/assignmentupdate.jsp'/>" target="_parent">Update Assignment</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/CRUDassignment/assignmentdelete.jsp'/>" target="_parent">Delete Assignment</a>	
 	    
   </body>
 </html>
