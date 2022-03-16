@@ -36,7 +36,6 @@
 	Lecture_Date    :<input type="text" name="Lecture Date" value="${form.Lecture_Date }"/>
 	<span style="color: red; font-weight: 900">${errors.Lecture_Date }</span>
 	<br/>
-	<input type="submit" value="Update Course Content"/>
-</form>
+	<input type="submit" value="Update Course Content"/> 
   </body>
 </html>

@@ -28,6 +28,5 @@
 	<a href="<c:url value='/jsps/CRUDCourseContent/CourseContentread.jsp'/>" target="_parent">Read Course Content</a> |&nbsp;
 	<a href="<c:url value='/jsps/CRUDCourseContent/CourseContentupdate.jsp'/>" target="_parent">Update Course Content</a> |&nbsp;	 
 	<a href="<c:url value='/jsps/CRUDCourseContent/CourseContentdelete.jsp'/>" target="_parent">Delete Course Content</a>	
-	    
   </body>
 </html>

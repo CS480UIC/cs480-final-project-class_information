@@ -22,12 +22,11 @@
   </head>
   
   <body>
-    <h1>CRUD operations for class </h1>
+    <h1>CRUD operations for Class </h1>
     <br>
 	<a href="<c:url value='/jsps/CRUDclass/classcreate.jsp'/>" target="_parent">Create class</a> |&nbsp; 
 	<a href="<c:url value='/jsps/CRUDclass/classread.jsp'/>" target="_parent">Read class</a> |&nbsp;
 	<a href="<c:url value='/jsps/CRUDclass/classupdate.jsp'/>" target="_parent">Update class</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/CRUDclass/classdelete.jsp'/>" target="_parent">Delete class</a>	
-	    
+	<a href="<c:url value='/jsps/CRUDclass/classdelete.jsp'/>" target="_parent">Delete class</a> 
   </body>
 </html>

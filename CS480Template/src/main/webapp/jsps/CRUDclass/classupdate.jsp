@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Update</h1>
+  <h1>Update Class</h1>
 <form action="<c:url value='/classServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Update ClassName   :<input type="text" name="ClassName" value="${form.ClassName }"/>
 	<span style="color: red; font-weight: 900">${errors.ClassName }</span>
 	<br/>
-	<input type="submit" value="Update class"/>
+	<input type="submit" value="Update class"/> 
 </form>
   </body>
 </html>

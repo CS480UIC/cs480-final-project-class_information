@@ -32,7 +32,7 @@
 	<span style="color: red; font-weight: 900">${errors.Semester }</span>
 	<br/>
 
-	<input type="submit" value="Read class"/>
+	<input type="submit" value="Read class"/> 
 </form>
   </body>
 </html>

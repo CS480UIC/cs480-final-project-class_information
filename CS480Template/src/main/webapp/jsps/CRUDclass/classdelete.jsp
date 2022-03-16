@@ -27,7 +27,7 @@
 	Delete ClassName   :<input type="text" name="ClassName" value="${form.ClassName }"/>
 	<span style="color: red; font-weight: 900">${errors.ClassName }</span>
 	<br/>
-	<input type="submit" value="Delete class"/>
+	<input type="submit" value="Delete class"/> 
 </form>
   </body>
 </html>
