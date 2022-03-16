@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity1</title>
+    <title>Delete grade</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -19,7 +19,7 @@
 	-->
 
   </head>
-  
+   
   <body>
   <h1>Delete Grade</h1>
 <form action="<c:url value=''/>" method="post">
