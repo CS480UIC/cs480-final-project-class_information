@@ -31,7 +31,7 @@
   </head>
   
   <body>
-<h1 style="text-align: center;">Jibreel Mohamed</h1>
+<h1 style="text-align: center;">Classroom Information</h1>
 <div style="font-size: 10pt;">
 	<c:choose>
 		<c:when test="${empty sessionScope.session_user }">
@@ -43,11 +43,12 @@
 			Hello：${sessionScope.session_user.username };
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
-			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/class/menu.jsp'/>" target="body">CRUD Class</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/grade/menu.jsp'/>" target="body">CRUD Grade</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/CRUDassignment/menu.jsp'/>" target="body">CRUD Assignment</a> 
 		</c:otherwise>
 	</c:choose>
+	
 
 </div>
   </body>

@@ -25,8 +25,8 @@
     <h1>This project is a web app the acts as a platform for online class content management. 
     Within our app people can create account as either a student/teacher/both.
      Teachers will be able to create "Classes". Within classes, 
-     Teachers can add/delete assignments, upload files, and grade assignmetns for students.
-      Students will be invited to classrooms and then will be given the abilitiy to access
+     Teachers can add/delete assignments, upload files, and grade assignments for students.
+      Students will be invited to classrooms and then will be given the ability to access
        all public content, submit assignments, and view their own grades. With this content
         management system, Teachers and Students can have a more fluid process in regards to 
         student-class interactions.</h1>
