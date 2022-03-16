@@ -40,13 +40,13 @@
 	
 		</c:when>
 		<c:otherwise>
-			Hello：${sessionScope.session_user.username };
-			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
+			Hello：${sessionScope.session_user.username }
+			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
-			<a href="<c:url value='/jsps/class/menu.jsp'/>" target="body">CRUD Class</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/grade/menu.jsp'/>" target="body">CRUD Grade</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/CRUDassignment/menu.jsp'/>" target="body">CRUD Assignment</a> 
-			<a href="<c:url value='/jsps/CRUDInstructor/menu.jsp'/>" target="body">CRUD Instructor</a> 
+			<a href="<c:url value='/jsps/class/menu.jsp'/>" target="body">CRUD Class</a> |&nbsp;
+			<a href="<c:url value='/jsps/grade/menu.jsp'/>" target="body">CRUD Grade</a> |&nbsp;
+			<a href="<c:url value='/jsps/CRUDassignment/menu.jsp'/>" target="body">CRUD Assignment</a> |&nbsp;
+			<a href="<c:url value='/jsps/CRUDinstructor/menu.jsp'/>" target="body">CRUD Instructor</a> |&nbsp;
 			<a href="<c:url value='/jsps/CRUDstudent/menu.jsp'/>" target="body">CRUD Student</a> 
 		</c:otherwise>
 	</c:choose>
