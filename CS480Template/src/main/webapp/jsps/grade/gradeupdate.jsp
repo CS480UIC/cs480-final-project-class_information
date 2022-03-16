@@ -29,7 +29,7 @@
 	StudentID   :<input type="text" name="StudentID" value="${form.StudentID }"/>
 	<span style="color: red; font-weight: 900">${errors.StudentID }</span>
 	<br/>
-    Points   :<input type="text" name="Points" value="${form.points }"/>
+    New Points   :<input type="text" name="NewPoints" value="${form.NewPoints }"/>
 	<span style="color: red; font-weight: 900">${errors.StudentID }</span>
 	<br/>
 	<input type="submit" value="Update Grade"/>
