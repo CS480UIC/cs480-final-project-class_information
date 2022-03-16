@@ -30,7 +30,7 @@
     Semester    :<input type="text" name="Semester" value="${form.Semester }"/>
 	<span style="color: red; font-weight: 900">${errors.Semester }</span>
 	<br/>
-	<input type="submit" value="Read Grade"/>
+	<input type="submit" value="Read Class"/>
 </form>
   </body>
 </html>
