@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update Assignment</title>
+    <title>Update Course Content</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,22 @@
   </head>
   
   <body>
-  <h1>Update Assignment</h1>
+  <h1>Update</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Assignment:<input type="text" name="username" value="${form.Assignment }"/>
-	<span style="color: red; font-weight: 900">${errors.Assignment }</span>
+	ClassID    :<input type="text" name="ClassID" value="${form.ClassID }"/>
+	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
 	<br/>
-	<input type="submit" value="Update Assignment"/>
+	Upload_File：<input type="text" name="Upload File" value="${form.Upload_File }"/>
+	<span style="color: red; font-weight: 900">${errors.Upload_File }</span>
+	<br/>
+	Description    :<input type="text" name="Description" value="${form.Description }"/>
+	<span style="color: red; font-weight: 900">${errors.Description }</span>
+	<br/>
+	Lecture_Date    :<input type="text" name="Lecture Date" value="${form.Lecture_Date }"/>
+	<span style="color: red; font-weight: 900">${errors.Lecture_Date }</span>
+	<br/>
+	<input type="submit" value="Update Course Content"/>
 </form>
   </body>
 </html>

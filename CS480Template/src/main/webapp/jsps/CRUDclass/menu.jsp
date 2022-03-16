@@ -5,8 +5,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Update Assignment</title>
+    <title>body</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +22,12 @@
   </head>
   
   <body>
-  <h1>Update Assignment</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update Assignment:<input type="text" name="username" value="${form.Assignment }"/>
-	<span style="color: red; font-weight: 900">${errors.Assignment }</span>
-	<br/>
-	<input type="submit" value="Update Assignment"/>
-</form>
+    <h1>CRUD operations for class </h1>
+    <br>
+	<a href="<c:url value='/jsps/CRUDclass/classcreate.jsp'/>" target="_parent">Create class</a> |&nbsp; 
+	<a href="<c:url value='/jsps/CRUDclass/classread.jsp'/>" target="_parent">Read class</a> |&nbsp;
+	<a href="<c:url value='/jsps/CRUDclass/classupdate.jsp'/>" target="_parent">Update class</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/CRUDclass/classdelete.jsp'/>" target="_parent">Delete class</a>	
+	    
   </body>
 </html>

@@ -23,15 +23,12 @@
   <body>
   <h1>Read Assignment</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-	ClassID:<input type="text" name="username" value="${form.ClassID}"/>
-	<span style="color: red; font-weight: 900">${errors.ClassID}</span>
+<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+	<input type="hidden" name="method" value="regist"/>
+	ClassID:<input type="text" name="username" value="${form.ClassID }"/>
+	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
 	<br/>
-<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
-	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/> --%>
+
 	<input type="submit" value="Read Assignment"/>
 </form>
   </body>
