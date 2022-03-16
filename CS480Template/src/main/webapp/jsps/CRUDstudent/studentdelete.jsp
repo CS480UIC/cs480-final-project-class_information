@@ -19,7 +19,7 @@
 	-->
 
   </head>
-  
+   
   <body>
   <h1>Delete Student</h1>
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">

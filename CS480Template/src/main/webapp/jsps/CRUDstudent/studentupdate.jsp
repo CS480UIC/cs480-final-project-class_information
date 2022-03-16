@@ -19,7 +19,7 @@
 	-->
 
   </head>
-  
+   
   <body>
   <h1>Update Student</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
