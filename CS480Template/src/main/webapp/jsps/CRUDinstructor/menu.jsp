@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Assignment</h1>
+    <h1>CRUD operations for Instructor</h1>
     <br>
-	<a href="<c:url value='/jsps/CRUDassignment/assignmentcreate.jsp'/>" target="_parent">Create Assignment</a> |&nbsp; 
-	<a href="<c:url value='/jsps/CRUDassignment/assignmentread.jsp'/>" target="_parent">Read Assignment</a> |&nbsp;
-	<a href="<c:url value='/jsps/CRUDassignment/assignmentupdate.jsp'/>" target="_parent">Update Assignment</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/CRUDassignment/assignmentdelete.jsp'/>" target="_parent">Delete Assignment</a>	
+	<a href="<c:url value='/jsps/CRUDinstructor/instructorcreate.jsp'/>" target="_parent">Create Instructor</a> |&nbsp; 
+	<a href="<c:url value='/jsps/CRUDinstructor/instructorread.jsp'/>" target="_parent">Read Instructor</a> |&nbsp;
+	<a href="<c:url value='/jsps/CRUDinstructor/instructorupdate.jsp'/>" target="_parent">Update Instructor</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/CRUDinstructor/instructordelete.jsp'/>" target="_parent">Delete Instructor</a>	
 	    
   </body>
 </html>

@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Create Assignment</title>
+    <title>Create Instructor</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,24 +21,15 @@
   </head>
   
   <body>
-  <h1>assignment Create</h1>
+  <h1>instructor Create</h1>
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	ClassID    :<input type="text" name="ClassID" value="${form.ClassID }"/>
+	InstructorID    :<input type="text" name="InstructorID" value="${form.InstructorID}"/>
+	<span style="color: red; font-weight: 900">${errors.InstructorID }</span>
+	<br/>
+	ClassID：<input type="text" name="ClassID" value="${form.ClassID }"/>
 	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
 	<br/>
-	Title：<input type="text" name="Title" value="${form.Title }"/>
-	<span style="color: red; font-weight: 900">${errors.Title }</span>
-	<br/>
-	Description	：<input type="text" name="Description" value="${form.Description }"/>
-	<span style="color: red; font-weight: 900">${errors.Description }</span>
-	<br/>
-	Due_Date	：<input type="text" name="Due Date" value="${form.Due_Date }"/>
-	<span style="color: red; font-weight: 900">${errors.Due_Date }</span>
-	<br/>
-	Upload_File	：<input type="text" name="Upload File" value="${form.Upload_File }"/>
-	<span style="color: red; font-weight: 900">${errors.Upload_File }</span>
-	<br/>
-	<input type="submit" value="Create assignment"/>
+	<input type="submit" value="Create Instructor"/>
 </form>
   </body>
 </html>

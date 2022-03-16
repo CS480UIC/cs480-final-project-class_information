@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Assignment</title>
+    <title>Read Student</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,15 +21,18 @@
   </head>
   
   <body>
-  <h1>Read Assignment</h1>
+  <h1>Read Student</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Entity1ServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	ClassID:<input type="text" name="username" value="${form.ClassID }"/>
+	StudentUID:<input type="text" name="StudenetUID" value="${form.StudentUID}"/>
+	<span style="color: red; font-weight: 900">${errors.StudentUID}</span>
+	<br/>
+	ClassID:<input type="text" name="ClassID" value="${form.ClassID }"/>
 	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
 	<br/>
 
-	<input type="submit" value="Read Assignment"/>
+	<input type="submit" value="Read Student"/>
 </form>
   </body>
 </html>

@@ -19,7 +19,7 @@
 	-->
 
   </head>
-   
+  
   <body>
   <h1>Delete Grade</h1>
 <form action="<c:url value=''/>" method="post">
@@ -29,6 +29,7 @@
 	StudentID   :<input type="text" name="StudentID" value="${form.StudentID }"/>
 	<span style="color: red; font-weight: 900">${errors.StudentID }</span>
 	<br/>
+	
 	<input type="submit" value="Delete Grade"/>
 </form>
   </body>

@@ -24,8 +24,8 @@
   <h1>Update Assignment</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Assignment:<input type="text" name="username" value="${form.Assignment }"/>
-	<span style="color: red; font-weight: 900">${errors.Assignment }</span>
+	AssignmentID:<input type="text" name="username" value="${form.AssignmentID}"/>
+	<span style="color: red; font-weight: 900">${errors.AssignmentID}</span>
 	<br/>
 	<input type="submit" value="Update Assignment"/>
 </form>
