@@ -19,7 +19,7 @@
 	-->
 
   </head>
-  
+   
   <body>
   <h1>Delete Grade</h1>
 <form action="<c:url value=''/>" method="post">
