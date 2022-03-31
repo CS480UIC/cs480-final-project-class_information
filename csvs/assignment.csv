@@ -1,0 +1,6 @@
+ClassID,AssignmentID,Title,Description,File,DueDate,Type
+11,1,PD 1,Indiivudally think about assignment,Assignment1.pdf,1/3/2022,Homework
+11,2,PD 2,As a group think about assignment,Assignment2.pdf,1/25/2022,Homework
+11,3,PD 3,Run base java code,Assignment3.pdf,2/15/2022,Homework
+11,4,PD 4,Run template Tomcat cope,Assignment4.pdf,2/22/2022,Homework
+11,5,PD 5,This assignment,Assignment5.pdf,3/32022,Project

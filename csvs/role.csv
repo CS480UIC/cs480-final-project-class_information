@@ -1,0 +1,13 @@
+UserID,Role,Admin
+1,Student,False 
+2,Teacher,False 
+3,Teacher,TRUE
+3,Student,False 
+4,Student,TRUE
+5,Teacher,False 
+6,Student,False 
+7,Student ,False 
+8,Teacher,False 
+9,Teacher,False 
+10,Teacher,False 
+11,Student ,TRUE
