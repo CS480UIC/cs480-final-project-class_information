@@ -41,7 +41,6 @@ WHERE (
     SELECT studentname FROM student WHERE instructorname = studentname
 );
 
-
 CREATE VIEW [Admin Names] AS 
 SELECT name FROM user 
 WHERE EXISTS (
