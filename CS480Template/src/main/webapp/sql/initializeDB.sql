@@ -18,6 +18,8 @@
 --
 -- Table structure for table `assignment`
 --
+CREATE DATABASE class_information;
+use class_information;
 
 DROP TABLE IF EXISTS `assignment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
