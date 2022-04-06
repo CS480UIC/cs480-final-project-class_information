@@ -1,0 +1,6 @@
+FileID,File,Description,LectureDate,LectureID,ContentType,ClassID
+1,Lecture1.pdf,what is data,1/13/2022,1,PDF,11
+2,Lecture1.mp4,data lecture,1/13/2022,1,MP4,11
+3,Lecture2.pdf,what is table,1/15/2022,2,PDF,11
+4,Lecture3.doc,example sql,1/17/2022,3,DOC,11
+5,Leture4.pdf,build sql,1/18/2022,4,PDF,11
