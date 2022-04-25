@@ -3,7 +3,6 @@
   <groupId>CS480Demo</groupId>
   <artifactId>CS480Demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
   <dependencies>
   	<dependency>
 		  <groupId>com.sun.xml.ws</groupId>
