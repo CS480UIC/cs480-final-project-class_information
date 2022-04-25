@@ -1,1 +1,0 @@
-INDEX VERSION 1.131+C:\Users\jchen\Desktop\UIC CS\CS 480\Project\cs480-final-project-class_information\CS480Template\.metadata\.plugins\org.eclipse.jdt.core
