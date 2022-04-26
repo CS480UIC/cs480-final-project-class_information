@@ -11,7 +11,8 @@ public class User {
 	
 	private String username;
 	private String password; 
-	private String email;
+	private String name;
+	private String uid;
 	
 
 	
@@ -23,6 +24,14 @@ public class User {
 		this.username = username;
 	}
 
+	public String getUid() {
+		return uid;
+	}
+
+	public void setUid(String uid) {
+		this.uid = uid;
+	}
+
 	public String getPassword() {
 		return password;
 	}
@@ -31,18 +40,18 @@ public class User {
 		this.password = password;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getName() {
+		return name;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	
 	@Override
 	public String toString() {
-		return "User [ username=" + username + ", password="
-				+ password + ", email=" + email +"]";
+		return "User [ uid=" + uid +", name=" + name + ", username="
+				+ username + ", password=" + password +"]";
 	}
 }

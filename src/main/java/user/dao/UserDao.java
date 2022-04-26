@@ -46,7 +46,8 @@ public class UserDao {
 		    	if(user_name.equals(username)){
 		    		user.setUsername(resultSet.getString("username"));
 		    		user.setPassword(resultSet.getString("password"));
-		    		user.setEmail(resultSet.getString("email"));
+		    		user.setName(resultSet.getString("name"));
+		    		user.setUid(resultSet.getString("uid"));
 		    		
 		    	}
 		    }
@@ -69,11 +70,12 @@ public class UserDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/class_information", MySQL_user, MySQL_password);
 			
-			String sql = "insert into user values(?,?,?)";
+			String sql = "insert into user values(?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,user.getUsername());
-		    preparestatement.setString(2,user.getPassword());
-		    preparestatement.setString(3,user.getEmail());
+			preparestatement.setString(2,user.getName());
+			preparestatement.setString(1,user.getUid());
+			preparestatement.setString(3,user.getUsername());
+		    preparestatement.setString(4,user.getPassword());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -94,7 +96,8 @@ public class UserDao {
 				User user = new User();
 				user.setUsername(resultSet.getString("username"));
 	    		user.setPassword(resultSet.getString("password"));
-	    		user.setEmail(resultSet.getString("email"));
+	    		user.setName(resultSet.getString("name"));
+	    		user.setUid(resultSet.getString("uid"));
 	    		list.add(user);
 			 }
 			connect.close();
