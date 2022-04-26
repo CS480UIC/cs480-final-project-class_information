@@ -25,17 +25,26 @@
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 		
-	ClassID    :<input type="text" name="ClassID" value="${form.ClassID }"/>
-	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
+	FileID    :<input type="text" name="FileID" value="${form.FileID }"/>
+	<span style="color: red; font-weight: 900">${errors.FileID }</span>
 	<br/>
-	Upload_File：<input type="text" name="Upload File" value="${form.Upload_File }"/>
-	<span style="color: red; font-weight: 900">${errors.Upload_File }</span>
+	File：<input type="text" name="File" value="${form.File }"/>
+	<span style="color: red; font-weight: 900">${errors.File }</span>
 	<br/>
 	Description    :<input type="text" name="Description" value="${form.Description }"/>
 	<span style="color: red; font-weight: 900">${errors.Description }</span>
 	<br/>
-	Lecture_Date    :<input type="text" name="Lecture Date" value="${form.Lecture_Date }"/>
-	<span style="color: red; font-weight: 900">${errors.Lecture_Date }</span>
+	LectureDate    :<input type="text" name="LectureDate Date" value="${form.LectureDate }"/>
+	<span style="color: red; font-weight: 900">${errors.LectureDate }</span>
+	<br/>
+	LectureID    :<input type="text" name="LectureID" value="${form.LectureID }"/>
+	<span style="color: red; font-weight: 900">${errors.LectureID }</span>
+	<br/>
+	ContentType    :<input type="text" name="ContentType" value="${form.ContentType }"/>
+	<span style="color: red; font-weight: 900">${errors.ContentType }</span>
+	<br/>
+	ClassID    :<input type="text" name="ClassID" value="${form.ClassID }"/>
+	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
 	<br/>
 	
 	<input type="submit" value="Delete Course Content"/> 
