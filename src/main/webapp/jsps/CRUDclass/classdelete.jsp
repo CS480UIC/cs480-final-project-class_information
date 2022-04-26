@@ -23,9 +23,9 @@
   <body>
   <h1>Delete class</h1>
 <form action="<c:url value='/classServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete ClassName   :<input type="text" name="ClassName" value="${form.ClassName }"/>
-	<span style="color: red; font-weight: 900">${errors.ClassName }</span>
+	<input type="hidden" name="method" value="delete"/>
+	Delete ClassID   :<input type="text" name="ClassID" value="${form.ClassID }"/>
+	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
 	<br/>
 	<input type="submit" value="Delete class"/> 
 </form>

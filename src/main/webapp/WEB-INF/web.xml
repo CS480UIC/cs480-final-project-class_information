@@ -153,4 +153,12 @@
   	<servlet-name>classServletUpdate</servlet-name>
   	<url-pattern>/classServletUpdate</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<servlet-name>classServletDelete</servlet-name>
+  	<servlet-class>Class.web.servlet.classServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>classServletDelete</servlet-name>
+  	<url-pattern>/classServletDelete</url-pattern>
+  </servlet-mapping>
 </web-app>

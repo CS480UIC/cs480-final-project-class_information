@@ -41,8 +41,6 @@ public class classServletUpdate extends HttpServlet {
 		ClassDao entity1dao = new ClassDao();
 		Class entity1 = null;
 		
-		
-
 		if(method.equals("search"))
 		{
 			try {
@@ -56,11 +54,12 @@ public class classServletUpdate extends HttpServlet {
 			}
 			if(entity1 != null){
 				request.getSession().setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/CRUDstudent/class_read_output.jsp").forward(request, response);
+//				request.setAttribute("entity1", entity1);
+				request.getRequestDispatcher("/jsps/CRUDclass/class_read_output.jsp").forward(request, response);
 			}
 			else{
 				request.setAttribute("msg", "Class not found");
-				request.getRequestDispatcher("/jsps/CRUDstudent/class_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/CRUDclass/class_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))

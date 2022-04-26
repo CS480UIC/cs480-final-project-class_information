@@ -40,9 +40,9 @@ public class ClassDao {
 		    	Integer UID = Integer.parseInt(resultSet.getString("ClassID"));
 		    	if(UID.equals(ID)){		    		
 		    		entity1.setClassID(Integer.parseInt(resultSet.getString("ClassID")));
-		    		entity1.setClassName(resultSet.getString("ClassID"));
-		    		entity1.setInstructorID(Integer.parseInt(resultSet.getString("ClassID")));
-		    		entity1.setSemester(resultSet.getString("ClassID"));
+		    		entity1.setClassName(resultSet.getString("ClassName"));
+		    		entity1.setInstructorID(Integer.parseInt(resultSet.getString("InstructorID")));
+		    		entity1.setSemester(resultSet.getString("Semester"));
 		    		return entity1;
 		    	}
 		    }
