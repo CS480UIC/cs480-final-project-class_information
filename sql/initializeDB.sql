@@ -24,14 +24,16 @@ use class_information;
 DROP TABLE IF EXISTS `assignment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `assignment` (
-  `ClassID` int DEFAULT NULL,
-  `AssignmentID` int DEFAULT NULL,
-  `Title` text,
-  `Description` text,
-  `File` text,
-  `DueDate` text,
-  `Type` text
+Create Table assignment(
+    classid int not NULL,
+    assignmentid int UNIQUE, 
+    title VarChar(20),
+    descriptions VarChar(20), 
+    files VarChar(20), 
+    due_date Date, 
+    atype VarChar(20),
+    Primary Key(assignmentid),
+    Foreign Key(classid) references class(classid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -52,11 +54,13 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `class`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `class` (
-  `ClassID` int DEFAULT NULL,
-  `ClassName` text,
-  `InstructorID` int DEFAULT NULL,
-  `Semester` text
+Create Table class(
+    classid int unique,
+    class_name VarChar(20) NOT NULL, 
+    instructoruid int NOT NULL, 
+    semester VarChar(20) NOT NULL , 
+    Primary Key(classid),
+    Foreign Key(instructoruid) references instructor(instructoruid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -77,14 +81,16 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `course_content`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `course_content` (
-  `FileID` int DEFAULT NULL,
-  `File` text,
-  `Description` text,
-  `LectureDate` text,
-  `LectureID` int DEFAULT NULL,
-  `ContentType` text,
-  `ClassID` int DEFAULT NULL
+Create Table course_content(
+    fileid int unique, 
+    files VarChar(20), 
+    descriptions VarChar(100), 
+    lectureDate Date, 
+    lectureid int, 
+    content_type VarChar(10),
+	classid int not null, 
+    Primary Key(fileid), 
+    FOREIGN Key(classid) references class(classid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -105,11 +111,15 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `grade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `grade` (
-  `StudentUID` int DEFAULT NULL,
-  `AssignmentID` int DEFAULT NULL,
-  `TotalPoints` int DEFAULT NULL,
-  `PointsEarned` int DEFAULT NULL
+Create Table grade(
+	gradeid int unique,
+    studentuid int NOT NULL, 
+    assignmentid int not null, 
+    total_points int, 
+    points_earned int, 
+    Primary Key(gradeid),
+    foreign key(studentuid) references student(studentid),
+    foreign key(assignmentid) references assignment(assignmentid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -119,7 +129,7 @@ CREATE TABLE `grade` (
 
 LOCK TABLES `grade` WRITE;
 /*!40000 ALTER TABLE `grade` DISABLE KEYS */;
-INSERT INTO `grade` VALUES (6,1,95,100),(6,2,32,100),(6,3,16,100),(6,4,64,100),(6,5,100,100);
+INSERT INTO `grade` VALUES (1,6,1,95,100),(2,6,2,32,100),(3,6,3,16,100),(4,6,4,64,100),(5,6,5,100,100);
 /*!40000 ALTER TABLE `grade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -130,9 +140,13 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `instructor`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `instructor` (
-  `UID` int DEFAULT NULL,
-  `ClassID` int DEFAULT NULL
+Create Table instructor(
+    instructoruid INT UNIQUE, 
+    instructorname Varchar(20) NOT NULL, 
+    classid INT NOT NULL,
+    Primary Key(instructoruid),
+    Foreign Key(instructoruid) references roles(useruid),
+    Foreign Key(classid) references class(classid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -142,7 +156,7 @@ CREATE TABLE `instructor` (
 
 LOCK TABLES `instructor` WRITE;
 /*!40000 ALTER TABLE `instructor` DISABLE KEYS */;
-INSERT INTO `instructor` VALUES (2,11),(3,13),(5,15),(8,17),(9,19),(10,NULL);
+INSERT INTO `instructor` VALUES (2, 'Samuel', 11),(3, 'Anthony',13),(5, 'Veronica', 15),(8, 'Ashley', 17),(9, 'Luna', 19),(10, 'Bob', 2);
 /*!40000 ALTER TABLE `instructor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,24 +164,26 @@ UNLOCK TABLES;
 -- Table structure for table `role`
 --
 
-DROP TABLE IF EXISTS `role`;
+DROP TABLE IF EXISTS `roles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `role` (
-  `UserID` int DEFAULT NULL,
-  `Role` text,
-  `Admin` text
+Create Table roles(
+    useruid INT UNIQUE, 
+    roles VARCHAR(20), 
+    admins bool, 
+    FOREIGN KEY(useruid) references user(uid),
+    Primary Key(useruid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `role`
+-- Dumping data for table `rolse`
 --
 
-LOCK TABLES `role` WRITE;
-/*!40000 ALTER TABLE `role` DISABLE KEYS */;
-INSERT INTO `role` VALUES (1,'Student','False '),(2,'Teacher','False '),(3,'Teacher','TRUE'),(3,'Student','False '),(4,'Student','TRUE'),(5,'Teacher','False '),(6,'Student','False '),(7,'Student ','False '),(8,'Teacher','False '),(9,'Teacher','False '),(10,'Teacher','False '),(11,'Student ','TRUE');
-/*!40000 ALTER TABLE `role` ENABLE KEYS */;
+LOCK TABLES `roles` WRITE;
+/*!40000 ALTER TABLE `roles` DISABLE KEYS */;
+INSERT INTO `roles` VALUES (1,'Student','False '),(2,'Teacher','False '),(3,'Teacher','TRUE'),(4,'Student','TRUE'),(5,'Teacher','False '),(6,'Student','False '),(7,'Student ','False '),(8,'Teacher','False '),(9,'Teacher','False '),(10,'Teacher','False '),(11,'Student ','TRUE');
+/*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -177,11 +193,16 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `student`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `student` (
-  `UID` text,
-  `ClassID` text,
-  `Enrolled` text,
-  `DegreeType` text
+Create Table student(
+    studentid int unique, 
+    classID int NOT NULL, 
+    enrolled Bool NOT NULL, 
+    degree_type VarChar(10),
+    studentname VarChar(20) Not NULL, 
+    Primary Key(studentid), 
+    Foreign Key(studentid) references roles(useruid),
+    Foreign Key(classid) references class(classid),
+    CONSTRAINT CHK_degree CHECK (degree_type = 'undergrad' or degree_type = 'masters' or degree_type = 'phd')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -191,7 +212,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('1','15','TRUE','Bachelors '),('4','13','TRUE','Masters'),('6','11','TRUE','PHD'),('7',NULL,'False ','None'),('e','','','');
+INSERT INTO `student` VALUES ('1','15','TRUE','undergrad', 'Joshua'),('4','13','TRUE','masters', 'Jibreel'),('6','11','TRUE','phd', 'Sophie'),('7',NULL,'False ','phd', 'Albedo');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -202,11 +223,12 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `user` (
-  `UID` int DEFAULT NULL,
-  `Name` text,
-  `Username` text,
-  `Password` text
+Create Table user(
+    uid INT UNIQUE, 
+    name VARCHAR(20) NOT NULL, 
+    username VarChar(20) NOT NULL, 
+    password VarChar(20) NOT NULL, 
+    Primary Key(uid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -216,7 +238,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Josh ','jdudle4','not1234'),(2,'Jibreel ','notjibreel','1234goodpass'),(3,'John ','johnisgreat','!!!john!!!'),(3,'jay','genshin123','i<3genshin'),(4,' turtle','iliketurtles','turtles'),(5,'bob','bob123','1234abcd'),(6,'haily','haily5','iamhaily5'),(7,'lucas','lucas33','defnotlucas'),(8,'james','2james','jamesisjames'),(9,'noah','2nOah','nameboat'),(10,'henry','henry2nd','iamking'),(11,'william','Wiliam3rd','williamthethird');
+INSERT INTO `user` VALUES (1,'Josh ','jdudle4','not1234'),(2,'Jibreel ','notjibreel','1234goodpass'),(3,'John ','johnisgreat','!!!john!!!'),(44,'jay','genshin123','i<3genshin'),(4,' turtle','iliketurtles','turtles'),(5,'bob','bob123','1234abcd'),(6,'haily','haily5','iamhaily5'),(7,'lucas','lucas33','defnotlucas'),(8,'james','2james','jamesisjames'),(9,'noah','2nOah','nameboat'),(10,'henry','henry2nd','iamking'),(11,'william','Wiliam3rd','williamthethird');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
