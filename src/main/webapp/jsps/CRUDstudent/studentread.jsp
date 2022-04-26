@@ -23,10 +23,10 @@
   <body>
   <h1>Read Student</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/StudentServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	StudentUID:<input type="text" name="StudenetUID" value="${form.StudentUID}"/>
-	<span style="color: red; font-weight: 900">${errors.StudentUID}</span>
+	UID:<input type="text" name="StudenetUID" value="${form.UID}"/>
+	<span style="color: red; font-weight: 900">${errors.UID}</span>
 	<br/>
 	ClassID:<input type="text" name="ClassID" value="${form.ClassID }"/>
 	<span style="color: red; font-weight: 900">${errors.ClassID }</span>

@@ -22,18 +22,18 @@
   
   <body>
   <h1>student Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/StudentServletCreate'/>" method="post">
 	ClassID    :<input type="text" name="ClassID" value="${form.ClassID}"/>
 	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
 	<br/>
-	StudentUID：<input type="text" name="StudentUID" value="${form.StudentUID}"/>
-	<span style="color: red; font-weight: 900">${errors.Title }</span>
+	UID：<input type="text" name="UID" value="${form.UID}"/>
+	<span style="color: red; font-weight: 900">${errors.UID }</span>
 	<br/>
 	Enrolled	：<input type="text" name="Enrolled" value="${form.enrolled}"/>
-	<span style="color: red; font-weight: 900">${errors.Description }</span>
+	<span style="color: red; font-weight: 900">${errors.enrolled }</span>
 	<br/>
-	Degree Type	：<input type="text" name="degree_type" value="${form.degree_type}"/>
-	<span style="color: red; font-weight: 900">${errors.Due_Date }</span>
+	Degree Type	：<input type="text" name="DegreeType" value="${form.DegreeType}"/>
+	<span style="color: red; font-weight: 900">${errors.DegreeType }</span>
 	<br/>
 
 	<input type="submit" value="Create Student"/>

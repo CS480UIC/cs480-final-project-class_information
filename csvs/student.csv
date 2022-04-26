@@ -3,4 +3,3 @@ UID,ClassID,Enrolled,DegreeType
 4,13,TRUE,Masters
 6,11,TRUE,PHD
 7,NULL,False ,None
-e,,,

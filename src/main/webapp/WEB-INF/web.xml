@@ -66,8 +66,8 @@
     <servlet-class>user.web.servlet.UserServletLogin</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>UserServletLogin</servlet-name>
-    <url-pattern>/UserServletLogin</url-pattern>
+    <url-pattern>/UserServletLogin</url-pattern><servlet-name>UserServletLogin</servlet-name>
+    
   </servlet-mapping>
   
   
@@ -103,4 +103,13 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+  	<description>StudentServletCreate</description>
+  	<servlet-name>StudentServletCreate</servlet-name>
+  	<servlet-class>student.web.servlet.StudentServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>StudentServletCreate</servlet-name>
+  	<url-pattern>/StudentServletCreate</url-pattern>
+  </servlet-mapping>
 </web-app>

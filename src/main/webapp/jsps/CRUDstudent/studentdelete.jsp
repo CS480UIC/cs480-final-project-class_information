@@ -22,10 +22,10 @@
    
   <body>
   <h1>Delete Student</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/StudentServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	StudentUID:<input type="text" name="StudentUID" value="${form.StudentUID}"/>
-	<span style="color: red; font-weight: 900">${errors.StudentUID}</span>
+	UID:<input type="text" name="UID" value="${form.UID}"/>
+	<span style="color: red; font-weight: 900">${errors.UID}</span>
 	<br/>
 	
 	ClassID:<input type="text" name="ClassID" value="${form.ClassID}"/>
@@ -34,8 +34,8 @@
 	Enrolled:<input type="text" name="enrolled" value="${form.enrolled}"/>
 	<span style="color: red; font-weight: 900">${errors.enrolled}</span>
 	<br/>
-	Degree Type:<input type="text" name="degree_type" value="${form.degree_type}"/>
-	<span style="color: red; font-weight: 900">${errors.degree_type}</span>
+	Degree Type:<input type="text" name="DegreeType" value="${form.DegreeType}"/>
+	<span style="color: red; font-weight: 900">${errors.DegreeType}</span>
 	<br/>
 	<input type="submit" value="Delete Student"/>
 </form>
