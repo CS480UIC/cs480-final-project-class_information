@@ -161,4 +161,13 @@
   	<servlet-name>classServletDelete</servlet-name>
   	<url-pattern>/classServletDelete</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>gradeServletAll</servlet-name>
+  	<servlet-class>grade.web.servlet.gradeServletAll</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>gradeServletAll</servlet-name>
+  	<url-pattern>/gradeServletAll</url-pattern>
+  </servlet-mapping>
 </web-app>

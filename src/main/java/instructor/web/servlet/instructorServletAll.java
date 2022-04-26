@@ -45,12 +45,12 @@ public class instructorServletAll extends HttpServlet {
 
 		String method = request.getParameter("method");
 		instructorDao instructordao = new instructorDao();
-		
+		instructor instructor = new instructor();
 
 			
 		if(method.equals("create")) {
 			instructorService serv = new instructorService();
-			instructor instructor = new instructor();
+			
 			instructor.setUid(Integer.parseInt(request.getParameter("UID")));
 			instructor.setClassID(Integer.parseInt(request.getParameter("ClassID")));
 			
@@ -67,10 +67,10 @@ public class instructorServletAll extends HttpServlet {
 			} 
 			
 		} 
-//			else if(method.equals("search")) {
-//			instructorService serv = new instructorService();
-//			instructor instructor = new instructor();
-//			
+//		else if(method.equals("search")) {
+//			try {
+//				instructordao.findByclassID(Integer.parseInt(request.getParameter("ClassID")));
+//			}
 //		}
 		
 //		if(method.equals("search"))
