@@ -22,15 +22,19 @@
    
   <body>
   <h1>Update Grade</h1>
-<form action="<c:url value=''/>" method="post">
+<form action="<c:url value='/gradeServletAll'/>" method="post">
+<input type="hidden" name="method" value="update"/>
     AssignmentID    :<input type="text" name="AssignmentID" value="${form.AssignmentID }"/>
 	<span style="color: red; font-weight: 900">${errors.AssignmentID }</span>
 	<br/>
-	StudentID   :<input type="text" name="StudentID" value="${form.StudentID }"/>
-	<span style="color: red; font-weight: 900">${errors.StudentID }</span>
+	StudentUID   :<input type="text" name="StudentUID" value="${form.StudentUID }"/>
+	<span style="color: red; font-weight: 900">${errors.StudentUID }</span>
 	<br/>
-    New Points   :<input type="text" name="NewPoints" value="${form.NewPoints }"/>
-	<span style="color: red; font-weight: 900">${errors.StudentID }</span>
+   PointsEarned   :<input type="text" name="PointsEarned" value="${form.PointsEarned }"/>
+	<span style="color: red; font-weight: 900">${errors.PointsEarned }</span>
+	<br/>
+	TotalPoints   :<input type="text" name="TotalPoints" value="${form.TotalPoints }"/>
+	<span style="color: red; font-weight: 900">${errors.TotalPoints }</span>
 	<br/>
 	<input type="submit" value="Update Grade"/>
 </form>

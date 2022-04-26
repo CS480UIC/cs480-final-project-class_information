@@ -22,12 +22,13 @@
    
   <body>
   <h1>Delete Grade</h1>
-<form action="<c:url value=''/>" method="post">
+<form action="<c:url value='/gradeServletAll'/>" method="post">
+<input type="hidden" name="method" value="delete"/>
     AssignmentID    :<input type="text" name="AssignmentID" value="${form.AssignmentID }"/>
 	<span style="color: red; font-weight: 900">${errors.AssignmentID }</span>
 	<br/>
-	StudentID   :<input type="text" name="StudentID" value="${form.StudentID }"/>
-	<span style="color: red; font-weight: 900">${errors.StudentID }</span>
+	StudentUID   :<input type="text" name="StudentUID" value="${form.StudentUID }"/>
+	<span style="color: red; font-weight: 900">${errors.StudentUID }</span>
 	<br/>
 	
 	<input type="submit" value="Delete Grade"/>

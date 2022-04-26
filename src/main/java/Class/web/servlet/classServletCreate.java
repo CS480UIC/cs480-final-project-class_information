@@ -49,18 +49,18 @@ public class classServletCreate extends HttpServlet {
 		form.setInstructorID(Integer.parseInt(request.getParameter("InstructorID")));
 		form.setClassName(request.getParameter("ClassName"));
 		form.setSemester(request.getParameter("Semester"));
-		
-		try {
-			entity1service.create(form);
-			response.sendRedirect(request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | ClassException e) {
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} 
+			try {
+				entity1service.create(form);
+				response.sendRedirect(request.getContextPath() + "/jsps/main.jsp");
+				
+			} catch (ClassNotFoundException | ClassException e) {
+				e.printStackTrace();
+			} catch (InstantiationException e) {
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			} 
 		
 	}
 
