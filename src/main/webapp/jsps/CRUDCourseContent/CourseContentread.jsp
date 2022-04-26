@@ -23,7 +23,7 @@
   <body>
   <h1>Read Course Content</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/contentServletAll'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	FileID    :<input type="text" name="FileID" value="${form.FileID }"/>
 	<span style="color: red; font-weight: 900">${errors.FileID }</span>

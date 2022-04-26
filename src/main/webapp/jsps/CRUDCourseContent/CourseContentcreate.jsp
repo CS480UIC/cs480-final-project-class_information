@@ -22,7 +22,7 @@
   
   <body>
   <h1>Course Content Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/contentServletAll'/>" method="post">
 	FileID    :<input type="text" name="FileID" value="${form.FileID }"/>
 	<span style="color: red; font-weight: 900">${errors.FileID }</span>
 	<br/>
