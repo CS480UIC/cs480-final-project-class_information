@@ -107,31 +107,6 @@ public class UserDao {
 		return list;
 		
 	}
-	public List<Object> q1() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
-		List<Object> list = new ArrayList<>();
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/class_information", MySQL_user, MySQL_password);
-			String sql = "CREATE VIEW [Active Students] AS \r\n"
-					+ "SELECT * FROM student \r\n"
-					+ "WHERE Enrolled = True\r\n"
-					+ "ORDER BY UID; ";
-			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-			ResultSet resultSet = preparestatement.executeQuery();			
-			while(resultSet.next()){
-				User user = new User();
-				user.setUsername(resultSet.getString("UID"));
-	    		user.setPassword(resultSet.getString("ClassID"));
-	    		user.setName(resultSet.getString("Enrolled"));
-	    		user.setUid(resultSet.getString("DegreeType"));
-	    		list.add(user);
-			 }
-			connect.close();
-		} catch(SQLException e) {
-			throw new RuntimeException(e);
-		}
-		return list;
-		
-	}
+	
 		
 }

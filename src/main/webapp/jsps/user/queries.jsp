@@ -25,7 +25,7 @@
     <h1>Please select the option below</h1>
     <br>
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
- 	<a href="<c:url value='/activestud'/>" target="body">Please list all active user in the table</a>&nbsp;&nbsp;
+ 	<a href="<c:url value='/q1'/>" target="body">Please list all active user in the table</a>&nbsp;&nbsp;
  
     
   </body>

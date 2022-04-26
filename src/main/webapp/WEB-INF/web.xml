@@ -94,6 +94,20 @@
     <servlet-name>findAll</servlet-name>
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
+  
+  
+   <servlet>
+    <description></description>
+    <display-name>q1</display-name>
+    <servlet-name>q1</servlet-name>
+    
+    <servlet-class>student.web.servlet.q1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>q1</servlet-name>
+    <url-pattern>/q1</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>

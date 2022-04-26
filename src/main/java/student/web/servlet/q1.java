@@ -1,4 +1,4 @@
-package user.web.servlet;
+package student.web.servlet;
 
 import java.io.IOException;
 import java.util.List;
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import user.service.UserService;
+import student.service.StudentService;
 
 /**
  * Servlet implementation class findAll
@@ -25,15 +25,15 @@ public class q1 extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UserService userservice = new UserService();
+		StudentService userservice = new StudentService();
 		try {
-			request.setAttribute("UserList", userservice.findall());
+			request.setAttribute("activeList", userservice.q1());
 		} catch (InstantiationException | IllegalAccessException
 				| ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		try {
-			List<Object> li = userservice.findall();
+			List<Object> li = userservice.q1();
 			for(int i = 0; i < li.size();i++){
 				System.out.println(li.get(i).toString());
 			}
@@ -44,7 +44,7 @@ public class q1 extends HttpServlet {
 		}
 		
 		
-		request.getRequestDispatcher("/jsps/user/q1_list_users.jsp").forward(request, response);
+		request.getRequestDispatcher("/jsps/CRUDstudent/func1_query.jsp").forward(request, response);
 	}
 
 }
