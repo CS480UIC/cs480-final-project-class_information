@@ -18,10 +18,10 @@
 	</tr>
 <c:forEach items="${activeList}" var="Student">
 	<tr>
-		<td>${Student.UID}</td>
-		<td>${Student.ClassID}</td>
-		<td>${Student.enrolled}</td>
-		<td>${Student.DegreeType}</td>
+		<td>${Student.getUID()}</td>
+		<td>${Student.getClassID()}</td>
+		<td>${Student.getEnrolled()}</td>
+		<td>${Student.getDegreeType()}</td>
 	</tr>
 </c:forEach>
 </table>
