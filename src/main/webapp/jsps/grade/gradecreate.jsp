@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>grade Create</title>
+    <title>create grade</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -17,25 +17,27 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-   
+
   </head>
   
   <body>
-  <h1>Grade Create</h1>
-<form action="<c:url value=''/>" method="post">
-	StudentID    :<input type="text" name="StudentID" value="${form.StudentID }"/>
-	<span style="color: red; font-weight: 900">${errors.StudentID }</span>
+  <h1>grade Create</h1>
+<form action="<c:url value='/gradeServletAll'/>" method="post">
+<input type="hidden" name="method" value="create"/>
+	StudentUID    :<input type="text" name="StudentUID" value="${form.StudentUID }"/>
+	<span style="color: red; font-weight: 900">${errors.StudentUID }</span>
 	<br/>
-	AssignmentID<input type="text" name="AssignmentID" value="${form.AssignmentID }"/>
+	AssignmentID：<input type="text" name="AssignmentID" value="${form.AssignmentID }"/>
 	<span style="color: red; font-weight: 900">${errors.AssignmentID }</span>
 	<br/>
-	Points Earned	：<input type="text" name="points_earned" value="${form.points_earned }"/>
-	<span style="color: red; font-weight: 900">${errors.points_earned }</span>
+	TotalPoints    :<input type="text" name="TotalPoints" value="${form.TotalPoints }"/>
+	<span style="color: red; font-weight: 900">${errors.TotalPoints }</span>
 	<br/>
-    Points Total    :<input type="text" name="points_total" value="${form.points_total }"/>
-	<span style="color: red; font-weight: 900">${errors.points_total }</span>
+	PointsEarned：<input type="text" name="PointsEarned" value="${form.PointsEarned }"/>
+	<span style="color: red; font-weight: 900">${errors.PointsEarned }</span>
 	<br/>
-	<input type="submit" value="Create Grade"/>
+	
+	<input type="submit" value="Create Grade"/> 
 </form>
   </body>
 </html>
