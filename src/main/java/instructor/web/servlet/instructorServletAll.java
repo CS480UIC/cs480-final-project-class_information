@@ -45,12 +45,12 @@ public class instructorServletAll extends HttpServlet {
 
 		String method = request.getParameter("method");
 		instructorDao instructordao = new instructorDao();
-		instructor instructor = new instructor();
+		
 
 			
 		if(method.equals("create")) {
 			instructorService serv = new instructorService();
-			
+			instructor instructor = new instructor();
 			instructor.setUid(Integer.parseInt(request.getParameter("UID")));
 			instructor.setClassID(Integer.parseInt(request.getParameter("ClassID")));
 			
