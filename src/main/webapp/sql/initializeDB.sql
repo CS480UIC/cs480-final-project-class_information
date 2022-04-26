@@ -191,7 +191,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('1','15','TRUE','Bachelors '),('4','13','TRUE','Masters'),('6','11','TRUE','PHD'),('7',NULL,'False ','None'),('e','','','');
+INSERT INTO `student` VALUES ('1','15','TRUE','Bachelors '),('4','13','TRUE','Masters'),('6','11','TRUE','PHD'),('7',NULL,'False ','None')S;
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
