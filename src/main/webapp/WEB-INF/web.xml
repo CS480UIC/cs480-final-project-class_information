@@ -161,4 +161,12 @@
   	<servlet-name>classServletDelete</servlet-name>
   	<url-pattern>/classServletDelete</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<servlet-name>instructorServletAll</servlet-name>
+  	<servlet-class>instructor.web.servlet.instructorServletAll</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>instructorServletAll</servlet-name>
+  	<url-pattern>/instructorServletAll</url-pattern>
+  </servlet-mapping>
 </web-app>

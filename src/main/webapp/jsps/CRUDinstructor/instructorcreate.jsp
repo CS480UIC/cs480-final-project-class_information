@@ -22,9 +22,10 @@
   
   <body>
   <h1>instructor Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	InstructorID    :<input type="text" name="InstructorID" value="${form.InstructorID}"/>
-	<span style="color: red; font-weight: 900">${errors.InstructorID }</span>
+<form action="<c:url value='/instructorServletAll'/>" method="post">
+	<input type="hidden" name="method" value="create"/>
+	UID    :<input type="text" name="UID" value="${form.UID}"/>
+	<span style="color: red; font-weight: 900">${errors.UID }</span>
 	<br/>
 	ClassID：<input type="text" name="ClassID" value="${form.ClassID }"/>
 	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
