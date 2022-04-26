@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Grade Output</title>
+    <title>Read Class Output</title>
     
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="cache-control" content="no-cache">
@@ -21,16 +21,16 @@
   </head>
   
   <body>
-  <h1>Read Grade Output</h1>
+  <h1>Read Assignment Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	StudentUID    :<input type="text" name="StudentUID" value="${entity1.getStudentUID()}" disabled/>
+	ClassID    :<input type="text" name="ClassID" value="${entity1.getClassID()}" disabled/>
 	<br/>
-	AssignmentID：<input type="text" name="AssignmentID" value="${entity1.getAssignmentID()}" disabled/>
+	AssignmentID：<input type="text" name="ClassName" value="${entity1.getAssignmentID()}" disabled/>
 	<br/>
-	PointsEarned	：<input type="text" name="PointsEarned" value="${entity1.getPointsEarned()}" disabled/>
+	Title	：<input type="text" name="InstructorID" value="${entity1.getTitle()}" disabled/>
 	<br/>
-	TotalPoints ：<input type="text" name="TotalPoints" value="${entity1.getTotalPoints()}" disabled/>
+	Description:<textarea type="text" name="Semester" value="${entity1.getDescription()}" disabled/>
 	<br/>
 </form>
 

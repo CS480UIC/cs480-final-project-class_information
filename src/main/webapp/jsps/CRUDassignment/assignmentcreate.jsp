@@ -22,21 +22,19 @@
   
   <body>
   <h1>assignment Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/assignmentServletAll'/>" method="post">
+	<input type="hidden" name="method" value="create"/>
 	ClassID    :<input type="text" name="ClassID" value="${form.ClassID }"/>
 	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
+	<br/>
+	AssignmentID    :<input type="text" name="AssignmentID" value="${form.AssignmentID }"/>
+	<span style="color: red; font-weight: 900">${errors.AssignmentID }</span>
 	<br/>
 	Title：<input type="text" name="Title" value="${form.Title }"/>
 	<span style="color: red; font-weight: 900">${errors.Title }</span>
 	<br/>
-	Description	：<input type="text" name="Description" value="${form.Description }"/>
+	Description：<input type="text" name="Description" value="${form.Description }"/>
 	<span style="color: red; font-weight: 900">${errors.Description }</span>
-	<br/>
-	Due_Date	：<input type="text" name="Due Date" value="${form.Due_Date }"/>
-	<span style="color: red; font-weight: 900">${errors.Due_Date }</span>
-	<br/>
-	Upload_File	：<input type="text" name="Upload File" value="${form.Upload_File }"/>
-	<span style="color: red; font-weight: 900">${errors.Upload_File }</span>
 	<br/>
 	<input type="submit" value="Create assignment"/>
 </form>

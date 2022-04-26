@@ -23,10 +23,14 @@
   <body>
   <h1>Read Assignment</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	ClassID:<input type="text" name="username" value="${form.ClassID }"/>
+<form action="<c:url value='/assignmentServletAll'/>" method="post">
+
+	<input type="hidden" name="method" value="search"/>
+	ClassID:<input type="text" name="ClassID" value="${form.ClassID }"/>
 	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
+	<br/>
+	AssignmentID:<input type="text" name="AssignmentID" value="${form.AssignmentID }"/>
+	<span style="color: red; font-weight: 900">${errors.AssignmentID }</span>
 	<br/>
 
 	<input type="submit" value="Read Assignment"/>
