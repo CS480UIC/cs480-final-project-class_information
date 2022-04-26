@@ -137,4 +137,20 @@
   	<servlet-name>StudentServletDelete</servlet-name>
   	<url-pattern>/StudentServletDelete</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<servlet-name>classServletCreate</servlet-name>
+  	<servlet-class>Class.web.servlet.classServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>classServletCreate</servlet-name>
+  	<url-pattern>/classServletCreate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>classServletUpdate</servlet-name>
+  	<servlet-class>Class.web.servlet.classServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>classServletUpdate</servlet-name>
+  	<url-pattern>/classServletUpdate</url-pattern>
+  </servlet-mapping>
 </web-app>

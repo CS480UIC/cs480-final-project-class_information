@@ -23,8 +23,14 @@
   <body>
   <h1>class Create</h1>
 <form action="<c:url value='/classServletCreate'/>" method="post">
-	ClassName    :<input type="text" name="ClassName" value="${form.ClassName }"/>
+	ClassID    :<input type="text" name="ClassID" value="${form.ClassID }"/>
+	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
+	<br/>
+	ClassName：<input type="text" name="ClassName" value="${form.ClassName }"/>
 	<span style="color: red; font-weight: 900">${errors.ClassName }</span>
+	<br/>
+	InstructorID    :<input type="text" name="InstructorID" value="${form.InstructorID }"/>
+	<span style="color: red; font-weight: 900">${errors.InstructorID }</span>
 	<br/>
 	Semester：<input type="text" name="Semester" value="${form.Semester }"/>
 	<span style="color: red; font-weight: 900">${errors.Semester }</span>

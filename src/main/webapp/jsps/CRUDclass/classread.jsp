@@ -23,13 +23,10 @@
   <body>
   <h1>Read class</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/classServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	ClassName    :<input type="text" name="ClassName" value="${form.ClassName }"/>
-	<span style="color: red; font-weight: 900">${errors.ClassName }</span>
-	<br/>
-	Semester：<input type="text" name="Semester" value="${form.Semester }"/>
-	<span style="color: red; font-weight: 900">${errors.Semester }</span>
+<form action="<c:url value='/classServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="search"/>
+	ClassID    :<input type="text" name="ClassID" value="${form.ClassID }"/>
+	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
 	<br/>
 
 	<input type="submit" value="Read class"/> 

@@ -23,10 +23,20 @@
   <body>
   <h1>Update Class</h1>
 <form action="<c:url value='/classServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update ClassName   :<input type="text" name="ClassName" value="${form.ClassName }"/>
+	<input type="hidden" name="method" value="update"/>
+	ClassID   :<input type="text" name="ClassID" value="${form.ClassID }"/>
+	<span style="color: red; font-weight: 900">${errors.ClassID }</span>
+	<br/>
+	ClassName   :<input type="text" name="ClassName" value="${form.ClassName }"/>
 	<span style="color: red; font-weight: 900">${errors.ClassName }</span>
 	<br/>
+	InstructorID   :<input type="text" name="InstructorID" value="${form.InstructorID }"/>
+	<span style="color: red; font-weight: 900">${errors.InstructorID }</span>
+	<br/>
+	Semester   :<input type="text" name="Semester" value="${form.Semester }"/>
+	<span style="color: red; font-weight: 900">${errors.Semester }</span>
+	<br/>
+
 	<input type="submit" value="Update class"/> 
 </form>
   </body>
