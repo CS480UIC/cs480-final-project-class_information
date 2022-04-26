@@ -170,13 +170,23 @@
   	<servlet-name>gradeServletAll</servlet-name>
   	<url-pattern>/gradeServletAll</url-pattern>
   </servlet-mapping>
+
   
    <servlet>
   	<servlet-name>assignmentServletAll</servlet-name>
   	<servlet-class>assignment.web.servlet.assignmentServletAll</servlet-class>
   </servlet>
+  
   <servlet-mapping>
   	<servlet-name>assignmentServletAll</servlet-name>
   	<url-pattern>/assignmentServletAll</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>instructorServletAll</servlet-name>
+  	<servlet-class>instructor.web.servlet.instructorServletAll</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>instructorServletAll</servlet-name>
+  	<url-pattern>/instructorServletAll</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -23,11 +23,8 @@
   <body>
   <h1>Read Instructor</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	InstructorID:<input type="text" name="InstructorID" value="${form.InstructorID}"/>
-	<span style="color: red; font-weight: 900">${errors.InstructorID}</span>
-	<br/>
+<form action="<c:url value='/instructorServletAll'/>" method="post">
+	<input type="hidden" name="method" value="search"/>
 	ClassID:<input type="text" name="ClassID" value="${form.ClassID}"/>
 	<span style="color: red; font-weight: 900">${errors.ClassID}</span>
 	<br/>

@@ -22,13 +22,10 @@
   
   <body>
   <h1>Delete Instructor</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete InstructorID:<input type="text" name="InstructorID" value="${form.InstructorID}"/>
-	<span style="color: red; font-weight: 900">${errors.InstructorID }</span>
-	<br/>
-	Delete ClassID:<input type="text" name="ClassID" value="${form.ClassID}"/>
-	<span style="color: red; font-weight: 900">${errors.ClassID}</span>
+<form action="<c:url value='/instructorServletAll'/>" method="post">
+	<input type="hidden" name="method" value="delete"/>
+	Delete UID:<input type="text" name="UID" value="${form.UID}"/>
+	<span style="color: red; font-weight: 900">${errors.UID }</span>
 	<br/>
 
 	<input type="submit" value="Delete Instructor"/>
