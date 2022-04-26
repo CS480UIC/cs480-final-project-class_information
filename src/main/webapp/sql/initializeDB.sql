@@ -216,7 +216,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Josh ','jdudle4','not1234'),(2,'Jibreel ','notjibreel','1234goodpass'),(3,'John ','johnisgreat','!!!john!!!'),(3,'jay','genshin123','i<3genshin'),(4,' turtle','iliketurtles','turtles'),(5,'bob','bob123','1234abcd'),(6,'haily','haily5','iamhaily5'),(7,'lucas','lucas33','defnotlucas'),(8,'james','2james','jamesisjames'),(9,'noah','2nOah','nameboat'),(10,'henry','henry2nd','iamking'),(11,'william','Wiliam3rd','williamthethird');
+INSERT INTO `user` VALUES (1,'Josh ','jdudle4','not1234'),(2,'Jibreel ','notjibreel','1234goodpass'),(3,'John ','johnisgreat','!!!john!!!'),(12,'jay','genshin123','i<3genshin'),(4,' turtle','iliketurtles','turtles'),(5,'bob','bob123','1234abcd'),(6,'haily','haily5','iamhaily5'),(7,'lucas','lucas33','defnotlucas'),(8,'james','2james','jamesisjames'),(9,'noah','2nOah','nameboat'),(10,'henry','henry2nd','iamking'),(11,'william','Wiliam3rd','williamthethird');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

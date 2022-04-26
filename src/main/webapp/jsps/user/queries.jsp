@@ -22,7 +22,7 @@
   </head>
   
   <body>
-    <h1>Welcome to the Demo</h1>
+    <h1>Please select the option below</h1>
     <br>
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
  
