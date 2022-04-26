@@ -31,15 +31,15 @@ public class instructorDao {
 		try {
 			java.lang.Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/class_information", MySQL_user, MySQL_password);
-		    String sql = "select * from instructor where classID=?";
+		    String sql = "select * from instructor where ClassID=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,ClassID);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	Integer UID = Integer.parseInt(resultSet.getString("classID"));
+		    	Integer UID = Integer.parseInt(resultSet.getString("ClassID"));
 		    	if(UID.equals(ClassID)) {
-		    		entity1.setClassID(Integer.parseInt(resultSet.getString("classID")));
+		    		entity1.setClassID(Integer.parseInt(resultSet.getString("ClassID")));
 		    		entity1.setUid(Integer.parseInt(resultSet.getString("UID")));
 		    				
 		    		return entity1;
@@ -57,7 +57,7 @@ public class instructorDao {
 		try {
 			java.lang.Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/class_information", MySQL_user, MySQL_password);
-			String sql = "insert into instructor(UID, classID) values(?,?)";
+			String sql = "insert into instructor(UID, ClassID) values(?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getUid());
 		    preparestatement.setInt(2,form.getClassID());
@@ -75,10 +75,10 @@ public class instructorDao {
 		try {
 			java.lang.Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/class_information", MySQL_user, MySQL_password);
-			String sql = "UPDATE instructor SET UID = ?, classID= ?;";
+			String sql = "UPDATE instructor SET ClassID = ? WHERE UID = ? ;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,UID);
-		    preparestatement.setInt(2, classID);
+		    preparestatement.setInt(2,UID);
+		    preparestatement.setInt(1, classID);
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -87,14 +87,14 @@ public class instructorDao {
 	}
 	
 	
-	public void delete(Integer classID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(Integer UID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			java.lang.Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/class_information", MySQL_user, MySQL_password);
 			
-			String sql = "delete from instructor where classID = ?";
+			String sql = "delete from instructor where UID = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,classID);
+		    preparestatement.setInt(1,UID);
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

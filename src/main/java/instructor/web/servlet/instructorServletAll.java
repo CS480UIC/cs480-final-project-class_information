@@ -45,12 +45,12 @@ public class instructorServletAll extends HttpServlet {
 
 		String method = request.getParameter("method");
 		instructorDao instructordao = new instructorDao();
-		
+		instructor instructor = new instructor();
+
 
 			
 		if(method.equals("create")) {
 			instructorService serv = new instructorService();
-			instructor instructor = new instructor();
 			instructor.setUid(Integer.parseInt(request.getParameter("UID")));
 			instructor.setClassID(Integer.parseInt(request.getParameter("ClassID")));
 			
@@ -67,61 +67,54 @@ public class instructorServletAll extends HttpServlet {
 			} 
 			
 		} 
-//		else if(method.equals("search")) {
-//			try {
-//				instructordao.findByclassID(Integer.parseInt(request.getParameter("ClassID")));
-//			}
-//		}
+		else if(method.equals("search")) {
+			try {
+				instructor = instructordao.findByclassID(Integer.parseInt(request.getParameter("ClassID")));
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
+			}
+			if(instructor != null){
+				request.getSession().setAttribute("entity1", instructor);
+				request.getRequestDispatcher("/jsps/CRUDinstructor/instructor_read_output.jsp").forward(request, response);
+			}
+			else{
+				request.setAttribute("msg", "Instructor not found");
+				request.getRequestDispatcher("/jsps/CRUDinstructor/instructor_read_output.jsp").forward(request, response);
+			}
+		}
+		else if(method.equals("update")) {
+			try {
+				
+				instructordao.update(Integer.parseInt(request.getParameter("UID")), Integer.parseInt(request.getParameter("ClassID")));
+
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
+			}
+			request.setAttribute("msg", "Instructor Updated");
+			request.getRequestDispatcher("/jsps/main.jsp").forward(request, response);
 		
-//		if(method.equals("search"))
-//		{
-//			try {
-//				instructor = instructordao.findByUsername(request.getParameter("username"));
-//			} catch (ClassNotFoundException e1) {
-//				e1.printStackTrace();
-//			} catch (InstantiationException e1) {
-//				e1.printStackTrace();
-//			} catch (IllegalAccessException e1) {
-//				e1.printStackTrace();
-//			}
-//
-//			if(instructor.getUsername()!=null){
-//				request.setAttribute("instructor", instructor);
-//				request.getRequestDispatcher("/jsps/instructor/instructor_update_output.jsp").forward(request, response);
-//
-//			}
-//			else{
-//				request.setAttribute("msg", "Entity not found");
-//				request.getRequestDispatcher("/jsps/instructor/instructor_read_output.jsp").forward(request, response);
-//			}
-//		}
-//		else if(method.equals("update"))
-//		{
-//			Map<String,String[]> paramMap = request.getParameterMap();
-//			instructor form = new instructor();
-//			List<String> info = new ArrayList<String>();
-//
-//			for(String name : paramMap.keySet()) {
-//				String[] values = paramMap.get(name);
-//				info.add(values[0]);
-//			}
-//			form.setPassword(info.get(2));
-//			form.setEmail(info.get(3));
-//			form.setUsername(request.getParameter("username"));
-//
-//			try {
-//				instructordao.update(form);
-//
-//			} catch (ClassNotFoundException e1) {
-//				e1.printStackTrace();
-//			} catch (InstantiationException e1) {
-//				e1.printStackTrace();
-//			} catch (IllegalAccessException e1) {
-//				e1.printStackTrace();
-//			}
-//			request.setAttribute("msg", "Entity Updated");
-//			request.getRequestDispatcher("/jsps/instructor/instructor_read_output.jsp").forward(request, response);
-//		}
+		}
+		else if(method.equals("delete")) {
+			try {
+				instructordao.delete(Integer.parseInt(request.getParameter("UID")));
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
+			}
+			request.setAttribute("msg", "Instructor Deleted");
+			request.getRequestDispatcher("/jsps/CRUDinstructor/instructor_read_output.jsp").forward(request, response);
+		}
 	}
 }
 
