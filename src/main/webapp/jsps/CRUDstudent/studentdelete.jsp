@@ -23,19 +23,13 @@
   <body>
   <h1>Delete Student</h1>
 <form action="<c:url value='/StudentServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
+	<input type="hidden" name="method" value="delete"/>
 	UID:<input type="text" name="UID" value="${form.UID}"/>
 	<span style="color: red; font-weight: 900">${errors.UID}</span>
 	<br/>
 	
 	ClassID:<input type="text" name="ClassID" value="${form.ClassID}"/>
 	<span style="color: red; font-weight: 900">${errors.ClassID}</span>
-	<br/>
-	Enrolled:<input type="text" name="enrolled" value="${form.enrolled}"/>
-	<span style="color: red; font-weight: 900">${errors.enrolled}</span>
-	<br/>
-	Degree Type:<input type="text" name="DegreeType" value="${form.DegreeType}"/>
-	<span style="color: red; font-weight: 900">${errors.DegreeType}</span>
 	<br/>
 	<input type="submit" value="Delete Student"/>
 </form>

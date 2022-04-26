@@ -25,7 +25,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/StudentServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	UID:<input type="text" name="StudenetUID" value="${form.UID}"/>
+	UID:<input type="text" name="UID" value="${form.UID}"/>
 	<span style="color: red; font-weight: 900">${errors.UID}</span>
 	<br/>
 	ClassID:<input type="text" name="ClassID" value="${form.ClassID }"/>

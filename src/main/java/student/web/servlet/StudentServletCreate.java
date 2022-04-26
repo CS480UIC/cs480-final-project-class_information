@@ -45,7 +45,6 @@ public class StudentServletCreate extends HttpServlet {
 		Map<String,String[]> paramMap = request.getParameterMap();
 		Student form = new Student();
 		List<String> info = new ArrayList<String>();
-		System.out.println("HERE");
 
 		for(String name : paramMap.keySet()) {
 			String[] values = paramMap.get(name);

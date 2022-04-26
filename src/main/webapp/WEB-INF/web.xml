@@ -112,4 +112,29 @@
   	<servlet-name>StudentServletCreate</servlet-name>
   	<url-pattern>/StudentServletCreate</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<description>StudentServletRead</description>
+  	<servlet-name>StudentServletRead</servlet-name>
+  	<servlet-class>student.web.servlet.StudentServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>StudentServletRead</servlet-name>
+  	<url-pattern>/StudentServletRead</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>StudentServletUpdate</servlet-name>
+  	<servlet-class>student.web.servlet.StudentServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>StudentServletUpdate</servlet-name>
+  	<url-pattern>/StudentServletUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>StudentServletDelete</servlet-name>
+  	<servlet-class>student.web.servlet.StudentServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>StudentServletDelete</servlet-name>
+  	<url-pattern>/StudentServletDelete</url-pattern>
+  </servlet-mapping>
 </web-app>

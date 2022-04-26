@@ -30,7 +30,7 @@ public class Student{
 	}
 
 	public void setClassID(Integer ClassID) {
-		this.ClassID= ClassID;
+		this.ClassID = ClassID;
 	}
 
 	public String getEnrolled() {

@@ -49,15 +49,16 @@ public class StudentServletRead extends HttpServlet {
 		} catch (IllegalAccessException e1) {
 			e1.printStackTrace();
 		}
+	
 		
-		if(entity1.getUID()!=null){
-					System.out.println(entity1);
-					request.setAttribute("entity1", entity1);
-					request.getRequestDispatcher("/jsps/CRUDstudent/studentread.jsp").forward(request, response);
+		if(entity1 != null){
+					request.getSession().setAttribute("entity1", entity1);
+//					request.setAttribute("entity1", entity1);
+					request.getRequestDispatcher("/jsps/CRUDstudent/student_read_output.jsp").forward(request, response);
 			}
 			else{
 			request.setAttribute("msg", "Student not found");
-			request.getRequestDispatcher("/jsps/CRUDstudent/studentread.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/CRUDstudent/student_read_output.jsp").forward(request, response);
 		}
 	}
 }

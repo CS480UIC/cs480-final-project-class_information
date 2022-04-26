@@ -63,7 +63,7 @@ public class StudentServletDelete extends HttpServlet {
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1Dao.delete(Integer.parseInt(request.getParameter("UID")));
+				entity1Dao.delete(Integer.parseInt(request.getParameter("UID")), Integer.parseInt(request.getParameter("ClassID")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {

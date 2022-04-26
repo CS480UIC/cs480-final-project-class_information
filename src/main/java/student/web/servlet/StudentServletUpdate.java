@@ -43,6 +43,8 @@ public class StudentServletUpdate extends HttpServlet {
 		String method = request.getParameter("method");
 		StudentDao entity1dao = new StudentDao();
 		Student entity1 = null;
+		
+		
 
 		if(method.equals("search"))
 		{
@@ -56,9 +58,23 @@ public class StudentServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUID()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/CRUDstudent/studentupdate.jsp").forward(request, response);
+			if(entity1 !=null){
+				
+				try {
+					entity1dao.update(Integer.parseInt(request.getParameter("UID")),
+							Integer.parseInt(request.getParameter("ClassID")),
+							request.getParameter("enrolled"), 
+							request.getParameter("DegreeType"));
+
+				} catch (ClassNotFoundException e1) {
+					e1.printStackTrace();
+				} catch (InstantiationException e1) {
+					e1.printStackTrace();
+				} catch (IllegalAccessException e1) {
+					e1.printStackTrace();
+				}
+				request.setAttribute("msg", "Student Updated");
+				request.getRequestDispatcher("/jsps/CRUDstudent/studentread.jsp").forward(request, response);
 
 			}
 			else{
@@ -66,34 +82,34 @@ public class StudentServletUpdate extends HttpServlet {
 				request.getRequestDispatcher("/jsps/CRUDstudent/studentread.jsp").forward(request, response);
 			}
 		}
-		else if(method.equals("update"))
-		{
-			Map<String,String[]> paramMap = request.getParameterMap();
-			Student form = new Student();
-			List<String> info = new ArrayList<String>();
-
-			for(String name : paramMap.keySet()) {
-				String[] values = paramMap.get(name);
-				info.add(values[0]);
-			}
-			form.setClassID(Integer.parseInt(info.get(0)));
-			form.setUID(Integer.parseInt(request.getParameter("UID")));
-			form.setEnrolled(info.get(2));
-			form.setDegreeType(info.get(3));	
-
-			try {
-				entity1dao.update(form);
-
-			} catch (ClassNotFoundException e1) {
-				e1.printStackTrace();
-			} catch (InstantiationException e1) {
-				e1.printStackTrace();
-			} catch (IllegalAccessException e1) {
-				e1.printStackTrace();
-			}
-			request.setAttribute("msg", "Student Updated");
-			request.getRequestDispatcher("/jsps/CRUDstudent/studentread.jsp").forward(request, response);
-		}
+//		else if(method.equals("update"))
+//		{
+//			Map<String,String[]> paramMap = request.getParameterMap();
+//			Student form = new Student();
+//			List<String> info = new ArrayList<String>();
+//
+//			for(String name : paramMap.keySet()) {
+//				String[] values = paramMap.get(name);
+//				info.add(values[0]);
+//			}
+//			form.setClassID(Integer.parseInt(info.get(0)));
+//			form.setUID(Integer.parseInt(request.getParameter("UID")));
+//			form.setEnrolled(info.get(2));
+//			form.setDegreeType(info.get(3));	
+//
+//			try {
+//				entity1dao.update(form);
+//
+//			} catch (ClassNotFoundException e1) {
+//				e1.printStackTrace();
+//			} catch (InstantiationException e1) {
+//				e1.printStackTrace();
+//			} catch (IllegalAccessException e1) {
+//				e1.printStackTrace();
+//			}
+//			request.setAttribute("msg", "Student Updated");
+//			request.getRequestDispatcher("/jsps/CRUDstudent/studentread.jsp").forward(request, response);
+//		}
 	}
 }
 
