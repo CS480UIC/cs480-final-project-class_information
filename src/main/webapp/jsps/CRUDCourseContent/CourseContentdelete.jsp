@@ -22,8 +22,8 @@
   
   <body>
   <h1>Delete Course Content</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
+<form action="<c:url value='/contentServletAll'/>" method="post">
+	<input type="hidden" name="method" value="create"/>
 		
 	FileID    :<input type="text" name="FileID" value="${form.FileID }"/>
 	<span style="color: red; font-weight: 900">${errors.FileID }</span>

@@ -189,4 +189,13 @@
   	<servlet-name>instructorServletAll</servlet-name>
   	<url-pattern>/instructorServletAll</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>contentServletAll</servlet-name>
+  	<servlet-class>content.web.servlet.contentServletAll</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>contentServletAll</servlet-name>
+  	<url-pattern>/contentServletAll</url-pattern>
+  </servlet-mapping>
 </web-app>
