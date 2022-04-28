@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import grade.domain.grade;
 import instructor.domain.instructor;
 import student.domain.Student;
 
@@ -131,13 +132,13 @@ public class instructorDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/class_information", MySQL_user, MySQL_password);
-			String sql = "SELECT UID FROM instructor \r\n"
-					+ "ORDER by UID; ";
+			String sql = "SELECT AssignmentID, SUM(PointsEarned)/SUM(TotalPoints) FROM grade AS avg GROUP BY AssignmentID;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				instructor user = new instructor();
-				user.setUid(Integer.parseInt(resultSet.getString("UID")));
+				grade user = new grade();
+				user.setStudentUID(Integer.parseInt(resultSet.getString("AssignmentID")));
+				user.setAssignmentID(resultSet.getInt(2));
 	    		list.add(user);
 			 }
 			connect.close();

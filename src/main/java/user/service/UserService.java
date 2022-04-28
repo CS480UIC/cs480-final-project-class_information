@@ -43,6 +43,10 @@ public class UserService {
 		
 	}
 	
+	public void init() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		userDao.init();
+	}
+	
 	
 	
 }

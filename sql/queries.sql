@@ -14,8 +14,7 @@
 
 
 CREATE VIEW [Number Taking Class] AS 
-Select classid, count(*) FROM student
-GROUP BY classid;
+Select ClassID, count(*) FROM student GROUP BY ClassID; 
 
 CREATE VIEW [Professors teaching most classes] AS 
 SELECT instructoruid FROM class
@@ -26,7 +25,7 @@ WHERE COUNT(instructoruid) =
 GROUP BY instructoruid;
 
 CREATE VIEW [Assignment Average Grade] AS 
-SELECT assignmentid, SUM(points_earned)/SUM(total_point) FROM grade 
+SELECT assignmentid, SUM(points_earned)/SUM(total_point) FROM grade AS avg
 GROUP BY assignmentid;
 
 CREATE VIEW [Average Assignments For Class per Professor] AS 

@@ -116,7 +116,7 @@ public class ClassDao {
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/class_information", MySQL_user, MySQL_password);
 			String sql = "SELECT ClassName FROM class\r\n"
 					+ "WHERE semester = \"Fall 2021\"\r\n"
-					+ "ORDER BY classid; ";
+					+ "ORDER BY ClassID; ";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
@@ -137,14 +137,13 @@ public class ClassDao {
 		try {
 			java.lang.Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/class_information", MySQL_user, MySQL_password);
-			String sql = "SELECT ClassName FROM class\r\n"
-					+ "WHERE semester = \"Fall 2021\"\r\n"
-					+ "ORDER BY classid; ";
+			String sql = "Select ClassID, count(*) FROM student as count WHERE ClassID IS NOT NULL GROUP BY ClassID;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				Class user = new Class();
-				user.setClassName(resultSet.getString("ClassName"));
+				Student user = new Student();
+				user.setClassID(Integer.parseInt(resultSet.getString("ClassID")));
+				user.setUID(resultSet.getInt(2));
 	    		list.add(user);
 			 }
 			connect.close();

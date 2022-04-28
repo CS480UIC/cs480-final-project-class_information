@@ -108,5 +108,18 @@ public class UserDao {
 		
 	}
 	
+	public void init() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/class_information", MySQL_user, MySQL_password);
+			String sql = "source ./src/main/webapp/sql/initializeDB.sql";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		
+	}
 		
 }

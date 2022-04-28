@@ -120,6 +120,18 @@
     <url-pattern>/q2</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>init</display-name>
+    <servlet-name>init</servlet-name>
+    
+    <servlet-class>user.web.servlet.init</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>init</servlet-name>
+    <url-pattern>/init</url-pattern>
+  </servlet-mapping>
+  
      <servlet>
     <description></description>
     <display-name>q3</display-name>
