@@ -11,12 +11,14 @@
 	<h3 align="center">Instructor with Most Class Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>Instructor ID</th>
+		<th>ClassID</th>
+		<th>Number of Students</th>
 
 	</tr>
 <c:forEach items="${activeList}" var="instruct">
 	<tr>
-		<td>${instruct.getClassName()}</td>
+		<td>${instruct.getClassID()}</td>
+		<td>${instruct.getUID()}</td>
 
 	</tr>
 </c:forEach>

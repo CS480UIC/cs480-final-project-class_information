@@ -22,20 +22,22 @@
   </head>
   
   <body>
-    <h1>Please select the option below</h1>
+    <h1>Please select an option below</h1>
     <br>
-    <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>|&nbsp;
+    <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>;
     <br>
- 	<a href="<c:url value='/q1'/>" target="body">Please list all active user in the table</a>|&nbsp;
+    <p>Simple Queries:</p>
+ 	<a href="<c:url value='/q1'/>" target="body">Please list all active user in the table</a>;
  	<br>
- 	<a href="<c:url value='/q3'/>" target="body">Please list all active Class (Fall 2021) in the table</a>|&nbsp;
+ 	<a href="<c:url value='/q3'/>" target="body">Please list all active Class (Fall 2021) in the table</a>;
  	<br>
- 	<a href="<c:url value='/q4'/>" target="body">Please list all Professor Teaching the most class in the table</a>|&nbsp;
+ 	<a href="<c:url value='/q4'/>" target="body">Please list all classIDs with the number of students in the table</a>;
  	<br>
- 	<a href="<c:url value='/q5'/>" target="body">Please list all Instructors that are also Students in the table</a>|&nbsp;
+ 	<a href="<c:url value='/q5'/>" target="body">Please list all Instructors that are also Students in the table</a>;
  	<br>
  	<a href="<c:url value='/q2'/>" target="body">Please list all active Instructor UIDs in the table</a>;
- 
+ 	<br>
+ 	<p>Complex Queries:</p>
     
   </body>
 </html>

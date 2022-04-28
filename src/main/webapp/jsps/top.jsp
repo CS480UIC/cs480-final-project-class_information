@@ -41,6 +41,7 @@
 		</c:when>
 		<c:otherwise>
 			Hello：${sessionScope.session_user.username }
+			<a href="<c:url value='/init'/>" target="body">Initialize Database</a> |&nbsp;
 			<a href="<c:url value='/jsps/user/queries.jsp'/>" target="body">Query Result</a> |&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
 			<a href="<c:url value='/jsps/CRUDclass/menu.jsp'/>" target="body">CRUD Class</a> |&nbsp;
