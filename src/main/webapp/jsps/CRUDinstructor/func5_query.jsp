@@ -8,15 +8,17 @@
 
 </head>
 <body>
-	<h3 align="center">Instructor UID Table </h3>
+	<h3 align="center">Avg Grade Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>UID</th>
+		<th>AssignmentID</th>
+		<th>avg</th>
 
 	</tr>
 <c:forEach items="${activeList}" var="ins">
 	<tr>
-		<td>${ins.getUid()}</td>
+		<td>${ins.getStudentUID()}</td>
+		<td>${ins.getAssignmentID()}</td>
 	</tr>
 </c:forEach>
 </table>
