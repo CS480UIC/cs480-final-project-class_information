@@ -75,7 +75,9 @@ public class assignmentServletAll extends HttpServlet {
 				form = assignmentdao.findAssignment(
 						Integer.parseInt(request.getParameter("ClassID")), 
 						Integer.parseInt(request.getParameter("AssignmentID")
-				));
+						
+								));
+				System.out.println(form.getDescription());
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {

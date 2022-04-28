@@ -25,16 +25,16 @@ public class q1 extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		StudentService studentservice = new StudentService();
+		StudentService userservice = new StudentService();
 		
 		try {
-			request.setAttribute("activeList", studentservice.q1());
+			request.setAttribute("activeList", userservice.q1());
 		} catch (InstantiationException | IllegalAccessException
 				| ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		try {
-			List<Object> li = studentservice.q1();
+			List<Object> li = userservice.q1();
 			for(int i = 0; i < li.size();i++){
 				System.out.println(li.get(i).toString());
 			}

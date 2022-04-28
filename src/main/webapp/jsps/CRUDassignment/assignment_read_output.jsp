@@ -30,7 +30,7 @@
 	<br/>
 	Title	：<input type="text" name="InstructorID" value="${entity1.getTitle()}" disabled/>
 	<br/>
-	Description:<textarea type="text" name="Semester" value="${entity1.getDescription()}" disabled/>
+	Description:<textarea type="text" name="Semester" disabled> ${entity1.getDescription()}</textarea>
 	<br/>
 </form>
 

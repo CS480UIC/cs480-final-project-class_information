@@ -22,13 +22,13 @@ import content.service.contentService;
  * Servlet implementation class UserServlet
  */
 
-public class classServletAll extends HttpServlet {
+public class contentServletAll extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public classServletAll() {
+	public contentServletAll() {
 		super();
 	}
 
@@ -123,7 +123,7 @@ public class classServletAll extends HttpServlet {
 		else if(method.equals("delete")) {
 			try {
 				contentdao.delete(
-						Integer.parseInt(request.getParameter("FileID")),
+						Integer.parseInt(request.getParameter("FileID"))
 				);
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();

@@ -32,7 +32,7 @@
 	Description    :<input type="text" name="Description" value="${form.Description }"/>
 	<span style="color: red; font-weight: 900">${errors.Description }</span>
 	<br/>
-	LectureDate    :<input type="text" name="LectureDate Date" value="${form.LectureDate }"/>
+	LectureDate    :<input type="text" name="LectureDate" value="${form.LectureDate }"/>
 	<span style="color: red; font-weight: 900">${errors.LectureDate }</span>
 	<br/>
 	LectureID    :<input type="text" name="LectureID" value="${form.LectureID }"/>
