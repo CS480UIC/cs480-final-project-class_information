@@ -31,13 +31,15 @@
  	<br>
  	<a href="<c:url value='/q3'/>" target="body">Please list all active Class (Fall 2021) in the table</a>
  	<br>
- 	<a href="<c:url value='/q4'/>" target="body">Please list all classIDs with the number of students in the table</a>
- 	<br>
- 	<a href="<c:url value='/q5'/>" target="body">Please list Average Grades in the table</a>
- 	<br>
+ 	
+ 	
  	<a href="<c:url value='/q2'/>" target="body">Please list all active Instructor UIDs in the table</a>
  	<br>
  	<p>Complex Queries:</p>
-    
+ 	
+    <a href="<c:url value='/q5'/>" target="body">Please list Average Grades in the table</a>
+ 	<br>
+ 	<a href="<c:url value='/q4'/>" target="body">Please list all classIDs with the number of students in the table</a>
+ 	<br>
   </body>
 </html>
