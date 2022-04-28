@@ -43,8 +43,8 @@ public class init extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		
-		request.getRequestDispatcher("/jsps/main.jsp").forward(request, response);
+		request.setAttribute("msg", "Initialized Database");
+		request.getRequestDispatcher("/jsps/CRUDinstructor/instructor_read_output.jsp").forward(request, response);
 	}
 
 }

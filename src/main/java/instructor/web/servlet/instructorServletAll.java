@@ -83,7 +83,7 @@ public class instructorServletAll extends HttpServlet {
 			}
 			else{
 				request.setAttribute("msg", "Instructor not found");
-				request.getRequestDispatcher("/jsps/CRUDinstructor/instructor_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/main.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update")) {

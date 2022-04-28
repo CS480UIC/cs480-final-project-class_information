@@ -1,5 +1,6 @@
 package user.dao;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -8,6 +9,7 @@ import java.sql.SQLException;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 import user.domain.User;
 
@@ -112,9 +114,14 @@ public class UserDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/class_information", MySQL_user, MySQL_password);
-			String sql = "source ./src/main/webapp/sql/initializeDB.sql";
-			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-			ResultSet resultSet = preparestatement.executeQuery();			
+//			String sql = "source ./src/main/webapp/sql/initializeDB.sql";
+//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+//			ResultSet resultSet = preparestatement.executeQuery();	
+			
+//			SqlFile sf = new SqlFile(new File("/src/main/webapp/sql/initializeDB.sql"));
+//            sf.setConnection(connect);
+//            sf.execute();
+            
 			connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
