@@ -20,7 +20,7 @@ public class content {
 		return this.FileID;
 	}
 	
-	public void setFile(String FileID) {
+	public void setFile(String File) {
 		this.File = File;
 	}
 
