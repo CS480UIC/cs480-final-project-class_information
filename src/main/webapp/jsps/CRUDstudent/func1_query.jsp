@@ -8,7 +8,7 @@
 
 </head>
 <body>
-	<h3 align="center"> Active User Table </h3>
+	<h3 align="center"> Active Student Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
 		<th>UID</th>

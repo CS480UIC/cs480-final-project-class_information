@@ -8,7 +8,7 @@
 
 </head>
 <body>
-	<h3 align="center">Instructor with Most Class Table </h3>
+	<h3 align="center">Number of Students in each Class </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
 		<th>ClassID</th>
