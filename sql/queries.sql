@@ -3,12 +3,12 @@
 --WHERE enrolled = True
 --ORDER BY studentuid; 
 
-CREATE VIEW [Instructors Names] AS 
-SELECT instructorname FROM instructor
-ORDER by instructorname; 
+--CREATE VIEW [Instructors Names] AS 
+--SELECT instructorname FROM instructor
+--ORDER by instructorname; 
 
 CREATE VIEW [Active Class Names] AS 
-SELECT class_name FROM class
+SELECT ClassName FROM class
 WHERE semester = "Spring 2021"
 ORDER BY classid; 
 
