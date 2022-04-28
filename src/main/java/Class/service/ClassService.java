@@ -1,6 +1,8 @@
 package Class.service;
 
 
+import java.util.List;
+
 import Class.dao.ClassDao;
 import Class.domain.Class;
 
@@ -13,5 +15,9 @@ public class ClassService {
 		Class entity1 = entity1Dao.findByClassID(form.getClassID());
 		if(entity1 != null) throw new ClassException("This class has been registered!");
 		entity1Dao.add(form);
+	}
+	public List<Object> q3() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return entity1Dao.q3();
+		
 	}
 }

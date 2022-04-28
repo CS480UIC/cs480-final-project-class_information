@@ -114,11 +114,8 @@ public class instructorDao {
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				Student user = new Student();
-				user.setUID(Integer.parseInt(resultSet.getString("UID")));
-//	    		user.setClassID(Integer.parseInt(resultSet.getString("ClassID")));
-//	    		user.setEnrolled(resultSet.getString("Enrolled"));
-//	    		user.setDegreeType(resultSet.getString("DegreeType"));
+				instructor user = new instructor();
+				user.setUid(Integer.parseInt(resultSet.getString("UID")));
 	    		list.add(user);
 			 }
 			connect.close();

@@ -25,7 +25,11 @@
     <h1>Please select the option below</h1>
     <br>
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>|&nbsp;
+    <br>
  	<a href="<c:url value='/q1'/>" target="body">Please list all active user in the table</a>|&nbsp;
+ 	<br>
+ 	<a href="<c:url value='/q3'/>" target="body">Please list all active Class (Fall 2021) in the table</a>|&nbsp;
+ 	<br>
  	<a href="<c:url value='/q2'/>" target="body">Please list all active Instructor UIDs in the table</a>;
  
     

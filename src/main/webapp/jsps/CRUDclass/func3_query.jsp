@@ -8,15 +8,16 @@
 
 </head>
 <body>
-	<h3 align="center">Instructor UID Table </h3>
+	<h3 align="center">Active Class Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>UID</th>
+		<th>Class Names</th>
 
 	</tr>
-<c:forEach items="${activeList}" var="ins">
+<c:forEach items="${activeList}" var="name">
 	<tr>
-		<td>${ins.getUid()}</td>
+		<td>${name.getClassName()}</td>
+
 	</tr>
 </c:forEach>
 </table>
