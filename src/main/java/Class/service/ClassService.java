@@ -20,4 +20,9 @@ public class ClassService {
 		return entity1Dao.q3();
 		
 	}
+	
+	public List<Object> q4() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return entity1Dao.q4();
+		
+	}
 }

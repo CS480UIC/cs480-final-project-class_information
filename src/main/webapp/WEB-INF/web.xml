@@ -132,6 +132,30 @@
     <url-pattern>/q3</url-pattern>
   </servlet-mapping>
   
+   <servlet>
+    <description></description>
+    <display-name>q4</display-name>
+    <servlet-name>q4</servlet-name>
+    
+    <servlet-class>Class.web.servlet.q4</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>q4</servlet-name>
+    <url-pattern>/q4</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <description></description>
+    <display-name>q5</display-name>
+    <servlet-name>q5</servlet-name>
+    
+    <servlet-class>instructor.web.servlet.q5</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>q5</servlet-name>
+    <url-pattern>/q5</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>

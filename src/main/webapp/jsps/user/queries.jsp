@@ -30,6 +30,10 @@
  	<br>
  	<a href="<c:url value='/q3'/>" target="body">Please list all active Class (Fall 2021) in the table</a>|&nbsp;
  	<br>
+ 	<a href="<c:url value='/q4'/>" target="body">Please list all Professor Teaching the most class in the table</a>|&nbsp;
+ 	<br>
+ 	<a href="<c:url value='/q5'/>" target="body">Please list all Instructors that are also Students in the table</a>|&nbsp;
+ 	<br>
  	<a href="<c:url value='/q2'/>" target="body">Please list all active Instructor UIDs in the table</a>;
  
     

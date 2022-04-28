@@ -7,10 +7,10 @@
 --SELECT instructorname FROM instructor
 --ORDER by instructorname; 
 
-CREATE VIEW [Active Class Names] AS 
-SELECT ClassName FROM class
-WHERE semester = "Spring 2021"
-ORDER BY classid; 
+--CREATE VIEW [Active Class Names] AS 
+--SELECT ClassName FROM class
+--WHERE semester = "Spring 2021"
+--ORDER BY classid; 
 
 
 CREATE VIEW [Number Taking Class] AS 

@@ -8,15 +8,15 @@
 
 </head>
 <body>
-	<h3 align="center">Fall 2021 Class Table </h3>
+	<h3 align="center">Instructor with Most Class Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>Class Names</th>
+		<th>Instructor ID</th>
 
 	</tr>
-<c:forEach items="${activeList}" var="name">
+<c:forEach items="${activeList}" var="instruct">
 	<tr>
-		<td>${name.getClassName()}</td>
+		<td>${instruct.getClassName()}</td>
 
 	</tr>
 </c:forEach>

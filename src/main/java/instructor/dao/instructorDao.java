@@ -126,4 +126,26 @@ public class instructorDao {
 		
 	}
 	
+	public List<Object> q5() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/class_information", MySQL_user, MySQL_password);
+			String sql = "SELECT UID FROM instructor \r\n"
+					+ "ORDER by UID; ";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				instructor user = new instructor();
+				user.setUid(Integer.parseInt(resultSet.getString("UID")));
+	    		list.add(user);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+	
 }

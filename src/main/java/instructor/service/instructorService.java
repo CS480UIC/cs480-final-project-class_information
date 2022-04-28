@@ -35,4 +35,8 @@ public class instructorService {
 		return instructorDao.q2();
 		
 	}
+	public List<Object> q5() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return instructorDao.q5();
+		
+	}
 }
