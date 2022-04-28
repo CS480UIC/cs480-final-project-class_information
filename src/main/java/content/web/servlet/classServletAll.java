@@ -92,7 +92,7 @@ public class classServletAll extends HttpServlet {
 			}
 			else{
 				request.setAttribute("msg", "Class not found");
-				request.getRequestDispatcher("/jsps/CRUDCoursecontent/content_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/CRUDCourseContent/content_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update")) {
@@ -103,7 +103,8 @@ public class classServletAll extends HttpServlet {
 						Integer.parseInt(request.getParameter("FileID")), 
 						(request.getParameter("File")), 
 						(request.getParameter("Description")), 
-						(request.getParameter("LectureDate")),
+						(request.getParameter("LectureDate")), 
+						Integer.parseInt(request.getParameter("LectureID")),
 						request.getParameter("ContentType"),
 						Integer.parseInt(request.getParameter("ClassID"))
 		
@@ -123,7 +124,7 @@ public class classServletAll extends HttpServlet {
 		else if(method.equals("delete")) {
 			try {
 				contentdao.delete(
-						Integer.parseInt(request.getParameter("FileID")),
+						Integer.parseInt(request.getParameter("FileID"))
 				);
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -133,7 +134,7 @@ public class classServletAll extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "content Deleted");
-			request.getRequestDispatcher("/jsps/CRUDCoursecontent/content_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/CRUDCourseContent/content_read_output.jsp").forward(request, response);
 		}
 	}
 }

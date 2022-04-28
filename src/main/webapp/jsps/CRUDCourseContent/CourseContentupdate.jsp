@@ -22,9 +22,9 @@
   
   <body>
   <h1>Update</h1>
-<form action="<c:url value='/contentServletAll'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	FileID    :<input type="text" name="FileID" value="${form.FileID }"/>
+<form action="<c:url value='/classServletAll'/>" method="post">
+	<input type="hidden" name="method" value="update"/>
+	FileID you wish to change   :<input type="text" name="FileID" value="${form.FileID }"/>
 	<span style="color: red; font-weight: 900">${errors.FileID }</span>
 	<br/>
 	File：<input type="text" name="File" value="${form.File }"/>
@@ -33,7 +33,7 @@
 	Description    :<input type="text" name="Description" value="${form.Description }"/>
 	<span style="color: red; font-weight: 900">${errors.Description }</span>
 	<br/>
-	LectureDate    :<input type="text" name="LectureDate Date" value="${form.LectureDate }"/>
+	LectureDate    :<input type="text" name="LectureDate" value="${form.LectureDate }"/>
 	<span style="color: red; font-weight: 900">${errors.LectureDate }</span>
 	<br/>
 	LectureID    :<input type="text" name="LectureID" value="${form.LectureID }"/>

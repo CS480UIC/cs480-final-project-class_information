@@ -205,11 +205,11 @@
   </servlet-mapping>
   
     <servlet>
-  	<servlet-name>contentServletAll</servlet-name>
-  	<servlet-class>content.web.servlet.contentServletAll</servlet-class>
+  	<servlet-name>classServletAll</servlet-name>
+  	<servlet-class>content.web.servlet.classServletAll</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>contentServletAll</servlet-name>
-  	<url-pattern>/contentServletAll</url-pattern>
+  	<servlet-name>classServletAll</servlet-name>
+  	<url-pattern>/classServletAll</url-pattern>
   </servlet-mapping>
 </web-app>

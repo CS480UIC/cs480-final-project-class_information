@@ -22,17 +22,19 @@
   
   <body>
   <h1>Course Content Create</h1>
-<form action="<c:url value='/contentServletAll'/>" method="post">
+<form action="<c:url value='/classServletAll'/>" method="post">
+	<input type="hidden" name="method" value="create"/>
+	
 	FileID    :<input type="text" name="FileID" value="${form.FileID }"/>
 	<span style="color: red; font-weight: 900">${errors.FileID }</span>
 	<br/>
-	File：<input type="text" name="File" value="${form.File }"/>
+	File	：<input type="text" name="File" value="${form.File }"/>
 	<span style="color: red; font-weight: 900">${errors.File }</span>
 	<br/>
 	Description    :<input type="text" name="Description" value="${form.Description }"/>
 	<span style="color: red; font-weight: 900">${errors.Description }</span>
 	<br/>
-	LectureDate    :<input type="text" name="LectureDate Date" value="${form.LectureDate }"/>
+	LectureDate    :<input type="text" name="LectureDate" value="${form.LectureDate }"/>
 	<span style="color: red; font-weight: 900">${errors.LectureDate }</span>
 	<br/>
 	LectureID    :<input type="text" name="LectureID" value="${form.LectureID }"/>
