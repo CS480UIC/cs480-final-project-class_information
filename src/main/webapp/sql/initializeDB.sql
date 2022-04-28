@@ -41,7 +41,7 @@ CREATE TABLE `assignment` (
 
 LOCK TABLES `assignment` WRITE;
 /*!40000 ALTER TABLE `assignment` DISABLE KEYS */;
-INSERT INTO `assignment` VALUES (11,1,'PD 1','Indiivudally think about assignment','Assignment1.pdf','1/3/2022','Homework'),(11,2,'PD 2','As a group think about assignment','Assignment2.pdf','1/25/2022','Homework'),(11,3,'PD 3','Run base java code','Assignment3.pdf','2/15/2022','Homework'),(11,4,'PD 4','Run template Tomcat cope','Assignment4.pdf','2/22/2022','Homework'),(11,5,'PD 5','This assignment','Assignment5.pdf','3/32022','Project');
+INSERT INTO `assignment` VALUES (11,1,'PD 1','Indivudally think about assignment','Assignment1.pdf','1/3/2022','Homework'),(11,2,'PD 2','As a group think about assignment','Assignment2.pdf','1/25/2022','Homework'),(11,3,'PD 3','Run base java code','Assignment3.pdf','2/15/2022','Homework'),(11,4,'PD 4','Run template Tomcat cope','Assignment4.pdf','2/22/2022','Homework'),(11,5,'PD 5','This assignment','Assignment5.pdf','3/32022','Project');
 /*!40000 ALTER TABLE `assignment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -66,7 +66,7 @@ CREATE TABLE `class` (
 
 LOCK TABLES `class` WRITE;
 /*!40000 ALTER TABLE `class` DISABLE KEYS */;
-INSERT INTO `class` VALUES (11,'CS480',2,'Fall 2021'),(13,'CS411',3,'Fall 2021'),(15,'CS412',5,'Sping 2021'),(17,'CS421',8,'Summer 2021'),(19,'CS499',9,'Summer 2021');
+INSERT INTO `class` VALUES (11,'CS480',2,'Fall 2021'),(13,'CS411',3,'Fall 2021'),(15,'CS412',5,'Spring 2021'),(17,'CS421',8,'Summer 2021'),(19,'CS499',9,'Summer 2021');
 /*!40000 ALTER TABLE `class` ENABLE KEYS */;
 UNLOCK TABLES;
 
