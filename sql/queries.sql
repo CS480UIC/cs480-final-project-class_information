@@ -1,7 +1,7 @@
-CREATE VIEW [Active Students] AS 
-SELECT * FROM student 
-WHERE enrolled = True
-ORDER BY studentuid; 
+--CREATE VIEW [Active Students] AS 
+--SELECT * FROM student 
+--WHERE enrolled = True
+--ORDER BY studentuid; 
 
 CREATE VIEW [Instructors Names] AS 
 SELECT instructorname FROM instructor

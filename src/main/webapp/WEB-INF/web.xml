@@ -108,6 +108,18 @@
     <url-pattern>/q1</url-pattern>
   </servlet-mapping>
   
+     <servlet>
+    <description></description>
+    <display-name>q2</display-name>
+    <servlet-name>q2</servlet-name>
+    
+    <servlet-class>instructor.web.servlet.q2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>q2</servlet-name>
+    <url-pattern>/q2</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>

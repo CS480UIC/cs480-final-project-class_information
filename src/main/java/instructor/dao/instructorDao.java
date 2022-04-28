@@ -7,9 +7,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import java.util.ArrayList;
+import java.util.List;
 
 import instructor.domain.instructor;
+import student.domain.Student;
 
 /**
  * DDL functions performed in database
@@ -101,4 +103,30 @@ public class instructorDao {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	public List<Object> q2() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/class_information", MySQL_user, MySQL_password);
+			String sql = "SELECT UID FROM instructor \r\n"
+					+ "ORDER by UID; ";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Student user = new Student();
+				user.setUID(Integer.parseInt(resultSet.getString("UID")));
+//	    		user.setClassID(Integer.parseInt(resultSet.getString("ClassID")));
+//	    		user.setEnrolled(resultSet.getString("Enrolled"));
+//	    		user.setDegreeType(resultSet.getString("DegreeType"));
+	    		list.add(user);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+	
 }

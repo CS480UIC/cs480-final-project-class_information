@@ -1,6 +1,8 @@
 package instructor.service;
 
 
+import java.util.List;
+
 import instructor.dao.instructorDao;
 import instructor.domain.instructor;
 
@@ -28,5 +30,9 @@ public class instructorService {
 		
 //		if(entity1.getUID()!=null && entity1.getUID().equals(form.getUID())) throw new instructorException("This user name has been registered!");
 		instructorDao.add(form);
+	}
+	public List<Object> q2() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return instructorDao.q2();
+		
 	}
 }
