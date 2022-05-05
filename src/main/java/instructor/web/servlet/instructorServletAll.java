@@ -18,7 +18,7 @@ import instructor.service.instructorException;
 import instructor.service.instructorService;
 
 /**
- * Servlet implementation class UserServlet
+ * servlet implementation class UserServlet
  */
 
 public class instructorServletAll extends HttpServlet {
